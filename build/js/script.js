@@ -21,31 +21,34 @@ $(document).ready(function () {
 
 
     // preloader
-    $('.preloader-wrapper').delay(550).fadeOut('slow');
+    var $preloader = $('.preloader-wrapper'),
+        $spinner = $preloader.find('.spinner');
+    $spinner.fadeOut();
+    $preloader.delay(550).fadeOut('slow');
 
 
     // menu
-    let last_id;
-    let $left_menu = $('.header-menu');
-    let menu_height = $left_menu.outerHeight(false);
-    let $menu_items = $left_menu.find('a');
-    let $scroll_items = $menu_items.map(function () {
-        let item = $($(this).attr('href'));
+    var last_id;
+    var $left_menu = $('.header-menu');
+    var menu_height = $left_menu.outerHeight(false);
+    var $menu_items = $left_menu.find('a');
+    var $scroll_items = $menu_items.map(function () {
+        var item = $($(this).attr('href'));
         if (item.length) {
             return item;
         }
     });
 
     $(window).scroll(function () {
-        let from_top = $(this).scrollTop() + menu_height;
-        let mar = parseInt($left_menu.css('margin-bottom'));
-        let cur = $scroll_items.map(function () {
+        var from_top = $(this).scrollTop() + menu_height;
+        var mar = parseInt($left_menu.css('margin-bottom'));
+        var cur = $scroll_items.map(function () {
             if ($(this).offset().top < from_top + mar) {
                 return this;
             }
         });
         cur = cur[cur.length - 1];
-        let id = cur && cur.length ? cur[0].id : '';
+        var id = cur && cur.length ? cur[0].id : '';
         if (last_id !== id) {
             last_id = id;
             $menu_items.parent()
@@ -89,7 +92,7 @@ $(document).ready(function () {
     // the transformation of the text in the section "about"
 
     //set animation timing
-    let animationDelay = 2500,
+    var animationDelay = 2500,
         //loading bar effect
         barAnimationDelay = 3800,
         barWaiting = barAnimationDelay - 3000, //3000 is the duration of the transition on the loading bar - set in the scss/css file
@@ -115,22 +118,22 @@ $(document).ready(function () {
 
     function singleLetters($words) {
         $words.each(function () {
-            let word = $(this),
+            var word = $(this),
                 letters = word.text().split(''),
                 selected = word.hasClass('is-visible');
             for (i in letters) {
                 if (word.parents('.rotate-2').length > 0) letters[i] = '<em>' + letters[i] + '</em>';
                 letters[i] = (selected) ? '<i class="in">' + letters[i] + '</i>' : '<i>' + letters[i] + '</i>';
             }
-            let newLetters = letters.join('');
+            var newLetters = letters.join('');
             word.html(newLetters).css('opacity', 1);
         });
     }
 
     function animateHeadline($headlines) {
-        let duration = animationDelay;
+        var duration = animationDelay;
         $headlines.each(function () {
-            let headline = $(this);
+            var headline = $(this);
 
             if (headline.hasClass('loading-bar')) {
                 duration = barAnimationDelay;
@@ -138,15 +141,15 @@ $(document).ready(function () {
                     headline.find('.cd-words-wrapper').addClass('is-loading')
                 }, barWaiting);
             } else if (headline.hasClass('clip')) {
-                let spanWrapper = headline.find('.cd-words-wrapper'),
+                var spanWrapper = headline.find('.cd-words-wrapper'),
                     newWidth = spanWrapper.width() + 10
                 spanWrapper.css('width', newWidth);
             } else if (!headline.hasClass('type')) {
                 //assign to .cd-words-wrapper the width of its longest word
-                let words = headline.find('.cd-words-wrapper b'),
+                var words = headline.find('.cd-words-wrapper b'),
                     width = 0;
                 words.each(function () {
-                    let wordWidth = $(this).width();
+                    var wordWidth = $(this).width();
                     if (wordWidth > width) width = wordWidth;
                 });
                 headline.find('.cd-words-wrapper').css('width', width);
@@ -160,10 +163,10 @@ $(document).ready(function () {
     }
 
     function hideWord($word) {
-        let nextWord = takeNext($word);
+        var nextWord = takeNext($word);
 
         if ($word.parents('.cd-headline').hasClass('type')) {
-            let parentSpan = $word.parent('.cd-words-wrapper');
+            var parentSpan = $word.parent('.cd-words-wrapper');
             parentSpan.addClass('selected').removeClass('waiting');
             setTimeout(function () {
                 parentSpan.removeClass('selected');
@@ -174,7 +177,7 @@ $(document).ready(function () {
             }, typeAnimationDelay);
 
         } else if ($word.parents('.cd-headline').hasClass('letters')) {
-            let bool = ($word.children('i').length >= nextWord.children('i').length) ? true : false;
+            var bool = ($word.children('i').length >= nextWord.children('i').length) ? true : false;
             hideLetter($word.find('i').eq(0), $word, bool, lettersDelay);
             showLetter(nextWord.find('i').eq(0), nextWord, bool, lettersDelay);
 
@@ -234,7 +237,7 @@ $(document).ready(function () {
         }
 
         if ($letter.is(':last-child') && $('html').hasClass('no-csstransitions')) {
-            let nextWord = takeNext($word);
+            var nextWord = takeNext($word);
             switchWord($word, nextWord);
         }
     }
@@ -280,7 +283,7 @@ $(document).ready(function () {
         infinite: true,
         slidesToShow: 3,
         slidesToScroll: 1,
-        preletrow: $('.sliders-arrow__prev'),
+        prevArrow: $('.sliders-arrow__prev'),
         nextArrow: $('.sliders-arrow__next'),
         speed: 300,
         responsive: [{
@@ -309,16 +312,17 @@ $(document).ready(function () {
     // styling the cursor
 
     //https://pcvector.net/scripts/other/699-izmenenie-formy-kursora-pri-navedenii-na-ssylku.html
-    $(window).on('load', function () {
+
+    window.onload = function () {
         trackMouse('.cursor', '.js-pointer');
-    });
+    }
 
     function trackMouse(hover, pointer) {
 
-        let $hover = document.querySelectorAll(hover);
-        let $pointer = document.querySelector(pointer);
-        let off = 50;
-        let first = !0;
+        var $hover = document.querySelectorAll(hover);
+        var $pointer = document.querySelector(pointer);
+        var off = 50;
+        var first = !0;
 
         function mouseX(evt) {
             if (!evt) evt = window.event;
@@ -361,6 +365,7 @@ $(document).ready(function () {
 
     }
 
+
     // opening the left sidebar when clicking on the ".left-sidebar__btn" button
     $('.left-sidebar__btn').on('click', function () {
         $('.left-sidebar').toggleClass('active');
@@ -376,13 +381,25 @@ $(document).ready(function () {
     // blocks with prices in the mobile version
     $.easing.def = "ease";
     $('.price-more a').click(function (e) {
-        let dropDown = $(this).parent().next();
+        var dropDown = $(this).parent().next();
         $('.dropdown').not(dropDown).slideUp('slow');
         dropDown.slideToggle('slow');
-        let $parentProgram = $(this).closest('.price');
+        var $parentProgram = $(this).closest('.price');
         $('.price.activated').not($parentProgram).removeClass('activated');
         $parentProgram.toggleClass('activated');
         e.preventDefault();
     });
+
+    // $.easing.def = 'ease';
+    // $('.program-more a').click(function (e) {
+    //     var dropDown = $(this).parent().next();
+    //     $('.program-dropdown').not(dropDown).slideUp('slow');
+    //     dropDown.slideToggle('slow');
+    //     var $parentProgram = $(this).closest('.program');
+    //     $('.program.activated').not($parentProgram).removeClass('activated');
+    //     $parentProgram.toggleClass('activated');
+    //     e.preventDefault();
+    // });
+
 
 });
