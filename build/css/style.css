@@ -36,68 +36,88 @@
   --transition: all 0.5s ease;
 }
 
-html {
-  --color-one: 155, 184, 232;
-  --color-two: 139, 155, 226;
-  --color-black: #36393A;
-  --color-white: #E4E5E5;
-  --bg-color-white: #fff;
-  --transition: all 0.5s ease;
-}
-
 .color {
   position: fixed;
   right: 0;
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
   z-index: 500;
   top: 50px;
+  width: auto;
+  height: auto;
+  background-color: rgba(56, 72, 83, 0.7);
 }
 
-.color div {
+.color .color-item {
   width: 20px;
   height: 20px;
   cursor: pointer;
   display: block;
-  margin: 50px;
+  position: relative;
+  margin: 10px;
 }
 
-.color div.red {
-  background-color: red;
+.color .color-item:before, .color .color-item:after {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 0;
+  width: 50%;
+  height: 100%;
 }
 
-.color div.blue {
-  background-color: blue;
+.color .color-item.red:before {
+  left: 0;
+  background-color: #d17e7e;
 }
 
-.color div.green {
-  background-color: green;
-}
-
-.color {
-  position: fixed;
+.color .color-item.red:after {
   right: 0;
-  display: block;
-  z-index: 500;
-  top: 50px;
+  background-color: #c05959;
 }
 
-.color div {
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-  display: block;
+.color .color-item.blue:before {
+  left: 0;
+  background-color: #9bb8e8;
 }
 
-.color div.red {
-  background-color: red;
+.color .color-item.blue:after {
+  right: 0;
+  background-color: #8b9be2;
 }
 
-.color div.blue {
-  background-color: blue;
+.color .color-item.turquoise:before {
+  left: 0;
+  background-color: #7aa8b7;
 }
 
-.color div.green {
-  background-color: green;
+.color .color-item.turquoise:after {
+  right: 0;
+  background-color: #538ea1;
+}
+
+.color .color-item.orange:before {
+  left: 0;
+  background-color: #e49379;
+}
+
+.color .color-item.orange:after {
+  right: 0;
+  background-color: #cb7155;
 }
 
 body {
@@ -204,11 +224,11 @@ textarea {
 /* Color of text selection with the mouse */
 *::-moz-selection {
   color: #2F3031;
-  background: rgba(155, 184, 232, 0.5);
+  background: rgba(var(--color-one), 0.5);
 }
 *::selection {
   color: #2F3031;
-  background: rgba(155, 184, 232, 0.5);
+  background: rgba(var(--color-one), 0.5);
 }
 
 .subtitle {
@@ -372,7 +392,7 @@ textarea {
   width: 100px;
   height: 100px;
   pointer-events: none;
-  z-index: 100;
+  z-index: 1000;
   top: 50%;
   left: 50%;
   opacity: 0;
