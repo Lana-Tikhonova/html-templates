@@ -17,8 +17,26 @@ $(document).ready(function () {
     */
 
 
-    // "use strict";
+    //"use strict";
 
+    const redBtn = document.querySelector('.red');
+    const blueBtn = document.querySelector('.blue');
+    const greenBtn = document.querySelector('.green');
+
+    redBtn.addEventListener('click', (e) => {
+        document.documentElement.style.setProperty('--color-one', '189, 195, 226');
+        document.documentElement.style.setProperty('--color-two', '139, 155, 228');
+    });
+
+    blueBtn.addEventListener('click', (e) => {
+        document.documentElement.style.setProperty('--color-one', '155, 184, 232');
+        document.documentElement.style.setProperty('--color-two', '139, 155, 226');
+    });
+
+    greenBtn.addEventListener('click', (e) => {
+        document.documentElement.style.setProperty('--color-one', '199, 155, 226');
+        document.documentElement.style.setProperty('--color-two', '139, 255, 226');
+    });
 
     // preloader
     var $preloader = $('.preloader-wrapper'),
@@ -61,7 +79,7 @@ $(document).ready(function () {
     });
 
 
-    // smooth page movement to the section
+    //smooth page movement to the section
     $("a.scroll-section").click(function (e) {
         e.preventDefault();
         elementClick = $(this).attr("href");
@@ -389,17 +407,4 @@ $(document).ready(function () {
         $parentProgram.toggleClass('activated');
         e.preventDefault();
     });
-
-    // $.easing.def = 'ease';
-    // $('.program-more a').click(function (e) {
-    //     var dropDown = $(this).parent().next();
-    //     $('.program-dropdown').not(dropDown).slideUp('slow');
-    //     dropDown.slideToggle('slow');
-    //     var $parentProgram = $(this).closest('.program');
-    //     $('.program.activated').not($parentProgram).removeClass('activated');
-    //     $parentProgram.toggleClass('activated');
-    //     e.preventDefault();
-    // });
-
-
 });

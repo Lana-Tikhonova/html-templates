@@ -30,17 +30,83 @@
 
 /* ------ Specification ------ */
 
-$color-one:rgba(155, 184, 232, 0.5);
-$color-two:rgba(139, 155, 226, 0.5);
-$color-black: #36393A;
-$color-white: #E4E5E5;
-$bg-color-white: #fff;
-$transition: all 0.5s ease;
+:root {
+    --color-one: 155, 184, 232;
+    --color-two: 139, 155, 226;
+    --color-black: #36393A;
+    --color-white: #E4E5E5;
+    --bg-color-white: #fff;
+    --transition: all 0.5s ease;
+}
+
+html {
+    --color-one: 155, 184, 232;
+    --color-two: 139, 155, 226;
+    --color-black: #36393A;
+    --color-white: #E4E5E5;
+    --bg-color-white: #fff;
+    --transition: all 0.5s ease;
+}
+
+.color {
+    position: fixed;
+    right: 0;
+    display: block;
+    z-index: 500;
+    top: 50px;
+
+    div {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        display: block;
+        margin: 50px;
+
+        &.red {
+            background-color: red;
+        }
+
+        &.blue {
+            background-color: blue;
+        }
+
+        &.green {
+            background-color: green;
+        }
+    }
+}
+
+.color {
+    position: fixed;
+    right: 0;
+    display: block;
+    z-index: 500;
+    top: 50px;
+
+    div {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        display: block;
+
+        &.red {
+            background-color: red;
+        }
+
+        &.blue {
+            background-color: blue;
+        }
+
+        &.green {
+            background-color: green;
+        }
+    }
+}
 
 body {
     font-family: 'Poppins', sans-serif;
-    color: $color-black;
-    background-color: $bg-color-white;
+    color: var(--color-black);
+    background-color: var(--bg-color-white);
     padding: 0;
     margin: 0;
     letter-spacing: 0;
@@ -72,14 +138,14 @@ h6 {
     font-weight: 500;
     font-size: 20px;
     line-height: 30px;
-    color: $color-black;
+    color: var(--color-black);
 }
 
 h2 {
     font-weight: 600;
     font-size: 125px;
     line-height: 120px;
-    color: $color-black;
+    color: var(--color-black);
     margin-bottom: 40px;
 }
 
@@ -91,7 +157,7 @@ p {
     line-height: 30px;
     font-style: normal;
     font-weight: 400;
-    color: $color-black;
+    color: var(--color-black);
 }
 
 ul,
@@ -113,15 +179,15 @@ input,
 input:focus,
 textarea {
     text-decoration: none;
-    transition: $transition;
+    transition: var(--transition);
     outline: none;
-    color: $color-black;
+    color: var(--color-black);
     box-shadow: none;
     font-weight: 400;
-    -webkit-transition: $transition;
-    -moz-transition: $transition;
-    -ms-transition: $transition;
-    -o-transition: $transition;
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
 }
 
 .arrow-btn {
@@ -130,11 +196,11 @@ textarea {
     height: 37px;
     position: fixed;
     z-index: 300;
-    transition: $transition;
-    -webkit-transition: $transition;
-    -moz-transition: $transition;
-    -ms-transition: $transition;
-    -o-transition: $transition;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
 }
 
 /* Color of text selection with the mouse */
@@ -160,7 +226,7 @@ textarea {
         height: 3px;
         bottom: 0;
         left: 0;
-        background: rgba($color-one, 1);
+        background: rgba(var(--color-one), 1);
     }
 }
 
@@ -176,7 +242,7 @@ textarea {
     top: 0;
     right: 0;
     bottom: 0;
-    background: $color-black;
+    background: var(--color-black);
     z-index: 100500;
 }
 
@@ -198,14 +264,14 @@ textarea {
     height: 60px;
     opacity: 0.5;
     border-radius: 50%;
-    background: rgba($color-one, 1);
+    background: rgba(var(--color-one), 1);
     animation-name: bubble;
     animation-duration: 2.0s;
     animation-iteration-count: infinite;
 
     &-two {
         animation-delay: -1.0s;
-        background: rgba($color-two, 1);
+        background: rgba(var(--color-two), 1);
     }
 
 }
@@ -230,7 +296,7 @@ textarea {
     bottom: 40px;
     right: 40px;
     opacity: 0.9;
-    background-color: rgba($color-one, 1);
+    background-color: rgba(var(--color-one), 1);
 }
 
 .arrow-btn__left,
@@ -245,21 +311,21 @@ textarea {
 
     &:after {
         content: "";
-        background-color: $color-black;
+        background-color: var(--color-black);
         width: 20px;
         height: 4.5px;
         display: block;
         border-radius: 0;
-        transition: $transition;
+        transition: var(--transition);
         z-index: -1;
         -webkit-border-radius: 0;
         -moz-border-radius: 0;
         -ms-border-radius: 0;
         -o-border-radius: 0;
-        -webkit-transition: $transition;
-        -moz-transition: $transition;
-        -ms-transition: $transition;
-        -o-transition: $transition;
+        -webkit-transition: var(--transition);
+        -moz-transition: var(--transition);
+        -ms-transition: var(--transition);
+        -o-transition: var(--transition);
     }
 }
 
@@ -302,13 +368,13 @@ textarea {
         margin: 0 auto;
         width: 10px;
         height: 10px;
-        background: rgba($color-two, 1);
+        background: rgba(var(--color-two), 1);
         border-radius: 50%;
-        transition: $transition;
-        -webkit-transition: $transition;
-        -moz-transition: $transition;
-        -ms-transition: $transition;
-        -o-transition: $transition;
+        transition: var(--transition);
+        -webkit-transition: var(--transition);
+        -moz-transition: var(--transition);
+        -ms-transition: var(--transition);
+        -o-transition: var(--transition);
     }
 
     &.hide .pointer__circle {
@@ -337,7 +403,7 @@ textarea {
         top: 200px;
 
         svg {
-            fill: rgba($color-one, 0.3)
+            fill: rgba(var(--color-one), 0.3)
         }
     }
 
@@ -347,7 +413,7 @@ textarea {
         left: 0;
 
         svg {
-            fill: rgba($color-two, 0.3)
+            fill: rgba(var(--color-two), 0.3)
         }
     }
 
@@ -356,7 +422,7 @@ textarea {
         right: 0;
 
         svg {
-            fill: rgba($color-one, 0.3)
+            fill: rgba(var(--color-one), 0.3)
         }
     }
 }
@@ -372,28 +438,27 @@ textarea {
     position: fixed;
     width: 225px;
     height: 100%;
-    background-color: $color-black;
+    background-color: var(--color-black);
     z-index: 100;
-    transition: $transition;
-    -webkit-transition: $transition;
-    -moz-transition: $transition;
-    -ms-transition: $transition;
-    -o-transition: $transition;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
     display: flex;
     flex-direction: column;
-    //justify-content: space-between;
 }
 
 .left-sidebar__btn {
     margin-top: 25px;
     margin-left: -2px;
-    background: $color-black;
+    background: var(--color-black);
     transform: rotate(90deg);
 }
 
 .arrow-btn__left_sidebar:after,
 .arrow-btn__right_sidebar:after {
-    background-color: rgba($color-one, 1);
+    background-color: rgba(var(--color-one), 1);
 }
 
 .container-page {
@@ -411,10 +476,6 @@ textarea {
     top: 7%;
 
     img {
-        width: 100%;
-    }
-
-    picture {
         width: 50%;
 
         &:first-child {
@@ -445,7 +506,7 @@ textarea {
         position: absolute;
         width: 70px;
         height: 70px;
-        border-color: rgba($color-one, 1);
+        border-color: rgba(var(--color-one), 1);
         border-style: solid;
         content: ' ';
         display: block;
@@ -485,7 +546,7 @@ textarea {
         position: absolute;
         width: 20px;
         height: 20px;
-        border-color: rgba($color-one, 1);
+        border-color: rgba(var(--color-one), 1);
         border-style: solid;
         content: ' ';
         display: block;
@@ -499,7 +560,7 @@ textarea {
     width: 175px;
 
     p {
-        color: $color-white;
+        color: var(--color-white);
         font-size: 12px;
         line-height: 20px;
 
@@ -516,7 +577,7 @@ textarea {
         position: absolute;
         width: 50%;
         height: 2px;
-        background: rgba($color-one, 1);
+        background: rgba(var(--color-one), 1);
     }
 
     &:before {
@@ -532,41 +593,42 @@ textarea {
 
 /* menu */
 
-.header-menu{
+.header-menu {
     padding: 30px 0;
 }
+
 .menu__item {
     a {
-        color: $color-white;
+        color: var(--color-white);
         font-size: 23px;
         line-height: 45px;
         display: block;
         margin-left: 30px;
-        transition: $transition;
-        -webkit-transition: $transition;
-        -moz-transition: $transition;
-        -ms-transition: $transition;
-        -o-transition: $transition;
+        transition: var(--transition);
+        -webkit-transition: var(--transition);
+        -moz-transition: var(--transition);
+        -ms-transition: var(--transition);
+        -o-transition: var(--transition);
     }
 
     &.active {
-        background: rgba($color-one, 1);
+        background: rgba(var(--color-one), 1);
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        transition: $transition;
+        transition: var(--transition);
         width: 241px;
-        -webkit-transition: $transition;
-        -moz-transition: $transition;
-        -ms-transition: $transition;
-        -o-transition: $transition;
+        -webkit-transition: var(--transition);
+        -moz-transition: var(--transition);
+        -ms-transition: var(--transition);
+        -o-transition: var(--transition);
     }
 
     &.active a {
-        color: $color-black;
+        color: var(--color-black);
         margin-left: 45px;
     }
 
     &:hover a {
-        color: $color-white;
+        color: var(--color-white);
         margin-left: 45px;
     }
 }
@@ -575,11 +637,11 @@ textarea {
 
 .social-network {
     margin-top: auto;
-padding-bottom: 50px;
+    padding-bottom: 50px;
 }
 
 .social-network__link {
-    background: rgba($color-two, 1);
+    background: rgba(var(--color-two), 1);
     width: 60px;
     height: 30px;
     display: flex;
@@ -587,19 +649,18 @@ padding-bottom: 50px;
     align-items: center;
     margin-bottom: 12px;
 
-    svg {
-        fill: $color-white;
-        width: 90%;
-        height: 60%;
-        transition: $transition;
-        -webkit-transition: $transition;
-        -moz-transition: $transition;
-        -ms-transition: $transition;
-        -o-transition: $transition;
+    span {
+        color: var(--color-white);
+        transition: var(--transition);
+        -webkit-transition: var(--transition);
+        -moz-transition: var(--transition);
+        -ms-transition: var(--transition);
+        -o-transition: var(--transition);
+        font-size: 17px;
     }
 
-    &:hover svg {
-        fill: $color-black;
+    &:hover span {
+        color: var(--color-black);
     }
 }
 
@@ -643,14 +704,14 @@ padding-bottom: 50px;
 h1 {
     font-size: 125px;
     line-height: 138px;
-    color: $color-white;
+    color: var(--color-white);
     font-weight: 400;
     padding-top: 286px;
 
     span {
         position: relative;
         z-index: 20;
-        transition: $transition;
+        transition: var(--transition);
         display: inline-block;
 
         &:after {
@@ -661,23 +722,23 @@ h1 {
             height: 10px;
             left: 0;
             bottom: 0;
-            background: rgba($color-one, 1);
+            background: rgba(var(--color-one), 1);
             z-index: -1;
-            transition: $transition;
+            transition: var(--transition);
         }
 
         &:hover {
-            color: $color-black;
-            transition: $transition;
+            color: var(--color-black);
+            transition: var(--transition);
             cursor: none;
 
             &:after {
                 height: 100%;
-                transition: $transition;
-                -webkit-transition: $transition;
-                -moz-transition: $transition;
-                -ms-transition: $transition;
-                -o-transition: $transition;
+                transition: var(--transition);
+                -webkit-transition: var(--transition);
+                -moz-transition: var(--transition);
+                -ms-transition: var(--transition);
+                -o-transition: var(--transition);
             }
         }
     }
@@ -696,7 +757,7 @@ h1 {
 }
 
 .mouse {
-    border: 2px solid $color-white;
+    border: 2px solid var(--color-white);
     border-radius: 13px;
     display: block;
     height: 46px;
@@ -707,7 +768,7 @@ h1 {
         animation-fill-mode: forwards;
         animation-iteration-count: infinite;
         animation-name: scroll;
-        background: $color-white;
+        background: var(--color-white);
         border: 1px solid transparent;
         border-radius: 4px;
         display: block;
@@ -766,7 +827,7 @@ h1 {
 }
 
 .about-photo {
-    box-shadow: 17px 17px 0 0 rgba($color-two, 0.5);
+    box-shadow: 17px 17px 0 0 rgba(var(--color-two), 0.5);
 }
 
 .about-photo__img {
@@ -787,7 +848,7 @@ h1 {
         font-weight: 300;
         font-size: 20px;
         line-height: 30px;
-        color: $color-black;
+        color: var(--color-black);
     }
 
     .cd-words-wrapper {
@@ -804,7 +865,7 @@ h1 {
             font-weight: 600;
             font-size: 20px;
             line-height: 30px;
-            color: rgba($color-one, 1);
+            color: rgba(var(--color-one), 1);
 
             &.is-visible {
                 position: relative;
@@ -824,7 +885,7 @@ h1 {
                 right: 0;
                 width: 2px;
                 height: 100%;
-                background-color: $color-black;
+                background-color: var(--color-black);
             }
         }
 
@@ -902,11 +963,11 @@ h1 {
     width: 30px;
     height: 30px;
     z-index: 50;
-    transition: $transition;
-    -webkit-transition: $transition;
-    -moz-transition: $transition;
-    -ms-transition: $transition;
-    -o-transition: $transition;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
     position: absolute;
     top: 55%;
     display: block;
@@ -926,21 +987,21 @@ h1 {
     &:after,
     &:after {
         content: "";
-        background-color: rgba($color-two, 1);
+        background-color: rgba(var(--color-two), 1);
         width: 20px;
         height: 2px;
         display: block;
         border-radius: 0;
-        transition: $transition;
+        transition: var(--transition);
         z-index: -1;
         -webkit-border-radius: 0;
         -moz-border-radius: 0;
         -ms-border-radius: 0;
         -o-border-radius: 0;
-        -webkit-transition: $transition;
-        -moz-transition: $transition;
-        -ms-transition: $transition;
-        -o-transition: $transition;
+        -webkit-transition: var(--transition);
+        -moz-transition: var(--transition);
+        -ms-transition: var(--transition);
+        -o-transition: var(--transition);
     }
 
 }
@@ -1035,11 +1096,11 @@ h1 {
     width: 242px;
     height: 10px;
     position: relative;
-    background: rgba($color-one, 0.5);
+    background: rgba(var(--color-one), 0.5);
     position: relative;
 
     span {
-        background: rgba($color-two, 1);
+        background: rgba(var(--color-two), 1);
         position: absolute;
         top: 0;
         left: 0;
@@ -1067,13 +1128,13 @@ h1 {
 /* portfolio */
 
 .masonry-gallery {
-    transition: $transition;
+    transition: var(--transition);
     column-gap: 20px;
     column-fill: initial;
-    -webkit-transition: $transition;
-    -moz-transition: $transition;
-    -ms-transition: $transition;
-    -o-transition: $transition;
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
 }
 
 .masonry-gallery__item {
@@ -1082,11 +1143,11 @@ h1 {
     vertical-align: top;
     width: 100%;
     position: relative;
-    transition: $transition;
-    -webkit-transition: $transition;
-    -moz-transition: $transition;
-    -ms-transition: $transition;
-    -o-transition: $transition;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
 
     &:before {
         content: '';
@@ -1094,10 +1155,10 @@ h1 {
         position: absolute;
         top: 0;
         left: 0;
-        background: rgba($color-one, 0.3);
+        background: rgba(var(--color-one), 0.3);
         width: 100%;
         height: 100%;
-        transition: $transition;
+        transition: var(--transition);
     }
 
     &:hover:before {
@@ -1111,11 +1172,11 @@ h1 {
         vertical-align: middle;
         max-width: 100%;
         width: 100%;
-        transition: $transition;
-        -webkit-transition: $transition;
-        -moz-transition: $transition;
-        -ms-transition: $transition;
-        -o-transition: $transition;
+        transition: var(--transition);
+        -webkit-transition: var(--transition);
+        -moz-transition: var(--transition);
+        -ms-transition: var(--transition);
+        -o-transition: var(--transition);
     }
 }
 
@@ -1147,7 +1208,7 @@ h1 {
         -moz-transform: rotate(-45deg);
         -ms-transform: rotate(-45deg);
         -o-transform: rotate(-45deg);
-        transition: $transition;
+        transition: var(--transition);
     }
 }
 
@@ -1163,17 +1224,17 @@ h1 {
     height: 20px;
     display: none;
     position: relative;
-    transition: $transition;
-    -webkit-transition: $transition;
-    -moz-transition: $transition;
-    -ms-transition: $transition;
-    -o-transition: $transition;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
 
     &:after,
     &:before {
         width: 20px;
         height: 2px;
-        background: $color-black;
+        background: var(--color-black);
         display: block;
         position: absolute;
         content: '';
@@ -1230,7 +1291,7 @@ h1 {
         display: block;
         width: 80%;
         height: 1px;
-        background: rgba($color-one, 1);
+        background: rgba(var(--color-one), 1);
         bottom: -12px;
     }
 
@@ -1256,7 +1317,7 @@ h1 {
         position: absolute;
         content: '';
         display: block;
-        background: rgba($color-one, 1);
+        background: rgba(var(--color-one), 1);
         height: 1px;
         width: 100%;
         bottom: 0;
@@ -1281,7 +1342,7 @@ h1 {
 
 .information-block__text_link:hover {
     font-weight: 300;
-    color: rgba($color-two, 1);
+    color: rgba(var(--color-two), 1);
 }
 
 .information-block-week {
@@ -1326,21 +1387,21 @@ h1 {
         height: 2px;
         width: 0;
         bottom: 0;
-        transition: $transition;
-        -webkit-transition: $transition;
-        -moz-transition: $transition;
-        -ms-transition: $transition;
-        -o-transition: $transition;
+        transition: var(--transition);
+        -webkit-transition: var(--transition);
+        -moz-transition: var(--transition);
+        -ms-transition: var(--transition);
+        -o-transition: var(--transition);
     }
 
     &:after {
         width: 100%;
-        background: rgba($color-one, 1);
+        background: rgba(var(--color-one), 1);
         right: 0;
     }
 
     &:before {
-        background: rgba($color-two, 1);
+        background: rgba(var(--color-two), 1);
         z-index: 1;
         left: 0;
     }
@@ -1365,7 +1426,7 @@ h1 {
 .contact-form-btn {
     width: 190px;
     height: 38px;
-    background: rgba($color-one, 1);
+    background: rgba(var(--color-one), 1);
     display: inline-block;
     vertical-align: middle;
     position: relative;
@@ -1398,13 +1459,13 @@ h1 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba($color-two, 1);
-    transition: $transition;
+    background: rgba(var(--color-two), 1);
+    transition: var(--transition);
     z-index: 1;
-    -webkit-transition: $transition;
-    -moz-transition: $transition;
-    -ms-transition: $transition;
-    -o-transition: $transition;
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
     transform: translateX(-100%);
     -webkit-transform: translateX(-100%);
     -moz-transform: translateX(-100%);
@@ -1448,7 +1509,7 @@ textarea:-ms-input-placeholder {
 
 .footer {
     width: 100%;
-    background: $color-black;
+    background: var(--color-black);
     height: 90px;
     display: flex;
     align-items: center;
@@ -1457,7 +1518,7 @@ textarea:-ms-input-placeholder {
 
 .copyright {
     font-size: 16px;
-    color: $color-white;
+    color: var(--color-white);
 }
 
 
@@ -1467,6 +1528,16 @@ textarea:-ms-input-placeholder {
 @media screen and (max-width: 1400px) {
     .left-sidebar {
         width: 175px;
+    }
+
+    .logo img {
+        &:first-child {
+            margin-left: 5px;
+        }
+
+        &:last-child {
+            margin-left: -13px;
+        }
     }
 
     .container-page {
@@ -1922,21 +1993,23 @@ textarea:-ms-input-placeholder {
     .points__sidebar-bottom {
         display: none;
     }
+
     .left-sidebar {
         overflow-y: auto;
         overflow-x: hidden;
     }
+
     .left-sidebar::-webkit-scrollbar-button {
         background-repeat: no-repeat;
         width: 5px;
         height: 0px;
     }
-    
+
     .left-sidebar::-webkit-scrollbar-track {
         background-color: #9bb8e8;
         height: 2000px;
     }
-    
+
     .left-sidebar::-webkit-scrollbar-thumb {
         background-color: #8b9be2;
         -webkit-border-radius: 0px;
@@ -1945,7 +2018,7 @@ textarea:-ms-input-placeholder {
         -ms-border-radius: 0px;
         -o-border-radius: 0px;
     }
-    
+
     .left-sidebar::-webkit-scrollbar {
         width: 5px;
     }

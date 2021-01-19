@@ -1,0 +1,143 @@
+@font-face {
+  font-family: 'icomoon';
+  src: url('../fonts/icomoon.eot?3g7cxm');
+  src: url('../fonts/icomoon.eot?3g7cxm#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?3g7cxm') format('truetype'),
+    url('../fonts/icomoon.woff?3g7cxm') format('woff'),
+    url('../fonts/icomoon.svg?3g7cxm#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-instagram:before {
+  content: "\e905";
+}
+
+.icon-behance:before {
+  content: "\e900";
+}
+
+.icon-dribbble:before {
+  content: "\e901";
+}
+
+.icon-facebook:before {
+  content: "\e902";
+}
+
+.icon-facebook-2:before {
+  content: "\e903";
+}
+
+.icon-facebook-messenger:before {
+  content: "\e904";
+}
+
+.icon-linkedin:before {
+  content: "\e908";
+}
+
+.icon-medium:before {
+  content: "\e909";
+}
+
+.icon-medium-2:before {
+  content: "\e90a";
+}
+
+.icon-pinterest:before {
+  content: "\e90b";
+}
+
+.icon-reddit:before {
+  content: "\e90c";
+}
+
+.icon-reddit-2:before {
+  content: "\e90d";
+}
+
+.icon-reddit-3:before {
+  content: "\e90e";
+}
+
+.icon-slack:before {
+  content: "\e90f";
+}
+
+.icon-snap-snapchat:before {
+  content: "\e910";
+}
+
+.icon-snap-snapchat-2:before {
+  content: "\e911";
+}
+
+.icon-tumblr:before {
+  content: "\e912";
+}
+
+.icon-tumblr-2:before {
+  content: "\e913";
+}
+
+.icon-tumblr-3:before {
+  content: "\e914";
+}
+
+.icon-twitch:before {
+  content: "\e915";
+}
+
+.icon-twitter:before {
+  content: "\e916";
+}
+
+.icon-twitter-2:before {
+  content: "\e917";
+}
+
+.icon-twitter-3:before {
+  content: "\e918";
+}
+
+.icon-twitter-4:before {
+  content: "\e919";
+}
+
+.icon-vimeo:before {
+  content: "\e91a";
+}
+
+.icon-vimeo-2:before {
+  content: "\e91b";
+}
+
+.icon-whatsapp:before {
+  content: "\e91c";
+}
+
+.icon-whatsapp-2:before {
+  content: "\e91d";
+}
+
+.icon-youtube:before {
+  content: "\e91e";
+}
