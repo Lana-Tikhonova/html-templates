@@ -21,11 +21,12 @@ $(document).ready(function () {
 
     const redBtn = document.querySelector('.red');
     const blueBtn = document.querySelector('.blue');
-    const greenBtn = document.querySelector('.green');
+    const turquoiseBtn = document.querySelector('.turquoise');
+    const orangeBtn = document.querySelector('.orange');
 
-    redBtn.addEventListener('click', (e) => {
-        document.documentElement.style.setProperty('--color-one', '189, 195, 226');
-        document.documentElement.style.setProperty('--color-two', '139, 155, 228');
+    orangeBtn.addEventListener('click', (e) => {
+        document.documentElement.style.setProperty('--color-one', '228, 147, 121');
+        document.documentElement.style.setProperty('--color-two', '203, 113, 85');
     });
 
     blueBtn.addEventListener('click', (e) => {
@@ -33,9 +34,14 @@ $(document).ready(function () {
         document.documentElement.style.setProperty('--color-two', '139, 155, 226');
     });
 
-    greenBtn.addEventListener('click', (e) => {
-        document.documentElement.style.setProperty('--color-one', '199, 155, 226');
-        document.documentElement.style.setProperty('--color-two', '139, 255, 226');
+    turquoiseBtn.addEventListener('click', (e) => {
+        document.documentElement.style.setProperty('--color-one', '122, 168, 183');
+        document.documentElement.style.setProperty('--color-two', '83, 142, 161');
+    });
+
+    redBtn.addEventListener('click', (e) => {
+        document.documentElement.style.setProperty('--color-one', '209, 126, 126');
+        document.documentElement.style.setProperty('--color-two', '192, 89, 89');
     });
 
     // preloader
