@@ -766,12 +766,27 @@ textarea {
 
 /* header */
 .header {
-  background: url(../img/BACKGROUND.jpg) no-repeat center right;
+  background: url(../img/HEADER-BACKGROUND.jpg) no-repeat center right;
   background-size: cover;
   width: 100%;
   height: 100vh;
   min-height: 890px;
   max-height: 1000px;
+  position: relative;
+}
+
+.header:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-black);
+  opacity: 0.4;
 }
 
 h1 {
