@@ -39,66 +39,86 @@
     --transition: all 0.5s ease;
 }
 
-html {
-    --color-one: 155, 184, 232;
-    --color-two: 139, 155, 226;
-    --color-black: #36393A;
-    --color-white: #E4E5E5;
-    --bg-color-white: #fff;
-    --transition: all 0.5s ease;
-}
-
+// changing the color of page elements
 .color {
     position: fixed;
     right: 0;
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
     z-index: 500;
     top: 50px;
+    width: auto;
+    height: auto;
+    background-color: rgba(56, 72, 83, 0.7);
 
-    div {
+    .color-item {
         width: 20px;
         height: 20px;
         cursor: pointer;
         display: block;
-        margin: 50px;
+        position: relative;
+        margin: 10px;
+
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            display: block;
+            top: 0;
+            width: 50%;
+            height: 100%;
+        }
 
         &.red {
-            background-color: red;
+            &:before {
+                left: 0;
+                background-color: #d17e7e;
+            }
+
+            &:after {
+                right: 0;
+                background-color: #c05959;
+            }
         }
 
         &.blue {
-            background-color: blue;
+            &:before {
+                left: 0;
+                background-color: #9bb8e8;
+            }
+
+            &:after {
+                right: 0;
+                background-color: #8b9be2;
+            }
         }
 
-        &.green {
-            background-color: green;
-        }
-    }
-}
+        &.turquoise {
+            &:before {
+                left: 0;
+                background-color: #7aa8b7;
+            }
 
-.color {
-    position: fixed;
-    right: 0;
-    display: block;
-    z-index: 500;
-    top: 50px;
-
-    div {
-        width: 20px;
-        height: 20px;
-        cursor: pointer;
-        display: block;
-
-        &.red {
-            background-color: red;
+            &:after {
+                right: 0;
+                background-color: #538ea1;
+            }
         }
 
-        &.blue {
-            background-color: blue;
-        }
+        &.orange {
+            &:before {
+                left: 0;
+                background-color: #e49379;
+            }
 
-        &.green {
-            background-color: green;
+            &:after {
+                right: 0;
+                background-color: #cb7155;
+            }
         }
     }
 }
@@ -207,7 +227,7 @@ textarea {
 
 *::selection {
     color: #2F3031;
-    background: rgba(155, 184, 232, 0.5);
+    background: rgba(var(--color-one), 0.5);
 
 }
 
@@ -354,7 +374,7 @@ textarea {
     width: 100px;
     height: 100px;
     pointer-events: none;
-    z-index: 100;
+    z-index: 1000;
     top: 50%;
     left: 50%;
     opacity: 0;
@@ -472,22 +492,46 @@ textarea {
 .logo {
     display: flex;
     width: 100%;
+    margin: 0 auto;
     position: absolute;
-    top: 7%;
-
-    img {
-        width: 50%;
-
-        &:first-child {
-            margin-left: 10px;
-        }
-
-        &:last-child {
-            margin-left: -20px;
-        }
-    }
 }
+.logo-image{
+    top:50%;
+    left: 50%;
+    width: 130px;
+    height: 90px;
+    margin-top: -45px;
+    margin-left: -65px;
+    
+    img{
+        width: 100%;
+        object-fit: cover;
+    }
+    &:after{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(var(--color-one), 0.4);;
+        content: ' ';
+        display: block;
+        
+    }
 
+}
+// .logo-icon{
+//     top: 7%;
+//     img {
+//         width: 50%;
+
+//         &:first-child {
+//             margin-left: 10px;
+//         }
+
+//         &:last-child {
+//             margin-left: -20px;
+//         }
+//     }
+// }
 
 .frame {
     position: relative;
@@ -524,22 +568,16 @@ textarea {
         border-width: 0 0 3px 3px
     }
 }
-
-.frame-logo {
+.frame-logo{
     width: 170px;
     height: 110px;
+    position: relative;
+}
 
-    &:before {
-        top: 0;
-        right: 0;
-        border-width: 1px 1px 0 0
-    }
-
-    &:after {
-        bottom: 0;
-        right: 0;
-        border-width: 0 1px 1px 0
-    }
+.frame-logo-border {
+    width: 100%;
+    height: 100%;
+    position: absolute;
 
     &:before,
     &:after {
@@ -550,6 +588,33 @@ textarea {
         border-style: solid;
         content: ' ';
         display: block;
+    }
+
+    &_left{
+        &:before {
+            top: 0;
+            left:0;
+            border-width: 1px 0 0 1px
+        }
+    
+        &:after {
+            bottom: 0;
+            left: 0;
+            border-width: 0 0 1px 1px
+        }
+    }
+    &_right{
+        &:before {
+            top: 0;
+            right: 0;
+            border-width: 1px 1px 0 0
+        }
+    
+        &:after {
+            bottom: 0;
+            right: 0;
+            border-width: 0 1px 1px 0
+        }
     }
 }
 
@@ -1529,16 +1594,25 @@ textarea:-ms-input-placeholder {
     .left-sidebar {
         width: 175px;
     }
-
-    .logo img {
-        &:first-child {
-            margin-left: 5px;
-        }
-
-        &:last-child {
-            margin-left: -13px;
-        }
+    .frame-logo {
+        width: 120px;
+        height: 87px;
     }
+    .logo-image {
+        width: 100px;
+        height: 70px;
+        margin-top: -35px;
+        margin-left: -50px;
+    }
+    // .logo-icon img {
+    //     &:first-child {
+    //         margin-left: 5px;
+    //     }
+
+    //     &:last-child {
+    //         margin-left: -13px;
+    //     }
+    // }
 
     .container-page {
         margin-left: 175px;
@@ -1546,11 +1620,6 @@ textarea:-ms-input-placeholder {
 
     .menu__item.active {
         width: 180px;
-    }
-
-    .frame-logo {
-        width: 120px;
-        height: 87px;
     }
 
     .slogan {
@@ -2006,12 +2075,12 @@ textarea:-ms-input-placeholder {
     }
 
     .left-sidebar::-webkit-scrollbar-track {
-        background-color: #9bb8e8;
+        background-color: rgba(var(--color-one), 1);;
         height: 2000px;
     }
 
     .left-sidebar::-webkit-scrollbar-thumb {
-        background-color: #8b9be2;
+        background-color: rgba(var(--color-two), 1);;
         -webkit-border-radius: 0px;
         border-radius: 0px;
         -moz-border-radius: 0px;

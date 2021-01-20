@@ -518,20 +518,32 @@ textarea {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  margin: 0 auto;
   position: absolute;
-  top: 7%;
 }
 
-.logo img {
-  width: 50%;
+.logo-image {
+  top: 50%;
+  left: 50%;
+  width: 130px;
+  height: 90px;
+  margin-top: -45px;
+  margin-left: -65px;
 }
 
-.logo img:first-child {
-  margin-left: 10px;
+.logo-image img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-.logo img:last-child {
-  margin-left: -20px;
+.logo-image:after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(var(--color-one), 0.4);
+  content: ' ';
+  display: block;
 }
 
 .frame {
@@ -572,21 +584,16 @@ textarea {
 .frame-logo {
   width: 170px;
   height: 110px;
+  position: relative;
 }
 
-.frame-logo:before {
-  top: 0;
-  right: 0;
-  border-width: 1px 1px 0 0;
+.frame-logo-border {
+  width: 100%;
+  height: 100%;
+  position: absolute;
 }
 
-.frame-logo:after {
-  bottom: 0;
-  right: 0;
-  border-width: 0 1px 1px 0;
-}
-
-.frame-logo:before, .frame-logo:after {
+.frame-logo-border:before, .frame-logo-border:after {
   position: absolute;
   width: 20px;
   height: 20px;
@@ -594,6 +601,30 @@ textarea {
   border-style: solid;
   content: ' ';
   display: block;
+}
+
+.frame-logo-border_left:before {
+  top: 0;
+  left: 0;
+  border-width: 1px 0 0 1px;
+}
+
+.frame-logo-border_left:after {
+  bottom: 0;
+  left: 0;
+  border-width: 0 0 1px 1px;
+}
+
+.frame-logo-border_right:before {
+  top: 0;
+  right: 0;
+  border-width: 1px 1px 0 0;
+}
+
+.frame-logo-border_right:after {
+  bottom: 0;
+  right: 0;
+  border-width: 0 1px 1px 0;
 }
 
 .slogan {
@@ -1640,21 +1671,21 @@ textarea:-ms-input-placeholder {
   .left-sidebar {
     width: 175px;
   }
-  .logo img:first-child {
-    margin-left: 5px;
+  .frame-logo {
+    width: 120px;
+    height: 87px;
   }
-  .logo img:last-child {
-    margin-left: -13px;
+  .logo-image {
+    width: 100px;
+    height: 70px;
+    margin-top: -35px;
+    margin-left: -50px;
   }
   .container-page {
     margin-left: 175px;
   }
   .menu__item.active {
     width: 180px;
-  }
-  .frame-logo {
-    width: 120px;
-    height: 87px;
   }
   .slogan {
     width: 127px;
@@ -2020,11 +2051,11 @@ textarea:-ms-input-placeholder {
     height: 0px;
   }
   .left-sidebar::-webkit-scrollbar-track {
-    background-color: #9bb8e8;
+    background-color: rgba(var(--color-one), 1);
     height: 2000px;
   }
   .left-sidebar::-webkit-scrollbar-thumb {
-    background-color: #8b9be2;
+    background-color: rgba(var(--color-two), 1);
     border-radius: 0px;
     -moz-border-radius: 0px;
     -ms-border-radius: 0px;
