@@ -17,7 +17,7 @@ $(document).ready(function () {
     */
 
 
-    //"use strict";
+    "use strict";
 
     const redBtn = document.querySelector('.red');
     const blueBtn = document.querySelector('.blue');
@@ -45,34 +45,33 @@ $(document).ready(function () {
     });
 
     // preloader
-    var $preloader = $('.preloader-wrapper'),
+    let $preloader = $('.preloader-wrapper'),
         $spinner = $preloader.find('.spinner');
     $spinner.fadeOut();
     $preloader.delay(550).fadeOut('slow');
 
-
     // menu
-    var last_id;
-    var $left_menu = $('.header-menu');
-    var menu_height = $left_menu.outerHeight(false);
-    var $menu_items = $left_menu.find('a');
-    var $scroll_items = $menu_items.map(function () {
-        var item = $($(this).attr('href'));
+    let last_id;
+    let $left_menu = $('.header-menu');
+    let menu_height = $left_menu.outerHeight(false);
+    let $menu_items = $left_menu.find('a');
+    let $scroll_items = $menu_items.map(function () {
+        let item = $($(this).attr('href'));
         if (item.length) {
             return item;
         }
     });
 
     $(window).scroll(function () {
-        var from_top = $(this).scrollTop() + menu_height;
-        var mar = parseInt($left_menu.css('margin-bottom'));
-        var cur = $scroll_items.map(function () {
+        let from_top = $(this).scrollTop() + menu_height;
+        let mar = parseInt($left_menu.css('margin-bottom'));
+        let cur = $scroll_items.map(function () {
             if ($(this).offset().top < from_top + mar) {
                 return this;
             }
         });
         cur = cur[cur.length - 1];
-        var id = cur && cur.length ? cur[0].id : '';
+        let id = cur && cur.length ? cur[0].id : '';
         if (last_id !== id) {
             last_id = id;
             $menu_items.parent()
@@ -84,17 +83,17 @@ $(document).ready(function () {
         }
     });
 
-
     //smooth page movement to the section
-    $("a.scroll-section").click(function (e) {
-        e.preventDefault();
-        elementClick = $(this).attr("href");
-        destination = $(elementClick).offset().top;
-        $("body,html").animate({
-            scrollTop: destination
-        }, 800);
+    Array.from(document.querySelectorAll('.menu__item a')).forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            let sectionId = e.target.getAttribute('href');
+            let section = document.querySelector(sectionId);
+            let sectionPosition = section.getBoundingClientRect().top;
+            let scrollPosition = window.pageYOffset + sectionPosition;
+            window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
+        });
     });
-
 
     // scroll up
     $(window).scroll(function () {
@@ -116,7 +115,7 @@ $(document).ready(function () {
     // the transformation of the text in the section "about"
 
     //set animation timing
-    var animationDelay = 2500,
+    let animationDelay = 2500,
         //loading bar effect
         barAnimationDelay = 3800,
         barWaiting = barAnimationDelay - 3000, //3000 is the duration of the transition on the loading bar - set in the scss/css file
@@ -142,22 +141,22 @@ $(document).ready(function () {
 
     function singleLetters($words) {
         $words.each(function () {
-            var word = $(this),
+            let word = $(this),
                 letters = word.text().split(''),
                 selected = word.hasClass('is-visible');
             for (i in letters) {
                 if (word.parents('.rotate-2').length > 0) letters[i] = '<em>' + letters[i] + '</em>';
                 letters[i] = (selected) ? '<i class="in">' + letters[i] + '</i>' : '<i>' + letters[i] + '</i>';
             }
-            var newLetters = letters.join('');
+            let newLetters = letters.join('');
             word.html(newLetters).css('opacity', 1);
         });
     }
 
     function animateHeadline($headlines) {
-        var duration = animationDelay;
+        let duration = animationDelay;
         $headlines.each(function () {
-            var headline = $(this);
+            let headline = $(this);
 
             if (headline.hasClass('loading-bar')) {
                 duration = barAnimationDelay;
@@ -165,15 +164,15 @@ $(document).ready(function () {
                     headline.find('.cd-words-wrapper').addClass('is-loading')
                 }, barWaiting);
             } else if (headline.hasClass('clip')) {
-                var spanWrapper = headline.find('.cd-words-wrapper'),
+                let spanWrapper = headline.find('.cd-words-wrapper'),
                     newWidth = spanWrapper.width() + 10
                 spanWrapper.css('width', newWidth);
             } else if (!headline.hasClass('type')) {
                 //assign to .cd-words-wrapper the width of its longest word
-                var words = headline.find('.cd-words-wrapper b'),
+                let words = headline.find('.cd-words-wrapper b'),
                     width = 0;
                 words.each(function () {
-                    var wordWidth = $(this).width();
+                    let wordWidth = $(this).width();
                     if (wordWidth > width) width = wordWidth;
                 });
                 headline.find('.cd-words-wrapper').css('width', width);
@@ -187,10 +186,10 @@ $(document).ready(function () {
     }
 
     function hideWord($word) {
-        var nextWord = takeNext($word);
+        let nextWord = takeNext($word);
 
         if ($word.parents('.cd-headline').hasClass('type')) {
-            var parentSpan = $word.parent('.cd-words-wrapper');
+            let parentSpan = $word.parent('.cd-words-wrapper');
             parentSpan.addClass('selected').removeClass('waiting');
             setTimeout(function () {
                 parentSpan.removeClass('selected');
@@ -201,7 +200,7 @@ $(document).ready(function () {
             }, typeAnimationDelay);
 
         } else if ($word.parents('.cd-headline').hasClass('letters')) {
-            var bool = ($word.children('i').length >= nextWord.children('i').length) ? true : false;
+            let bool = ($word.children('i').length >= nextWord.children('i').length) ? true : false;
             hideLetter($word.find('i').eq(0), $word, bool, lettersDelay);
             showLetter(nextWord.find('i').eq(0), nextWord, bool, lettersDelay);
 
@@ -261,7 +260,7 @@ $(document).ready(function () {
         }
 
         if ($letter.is(':last-child') && $('html').hasClass('no-csstransitions')) {
-            var nextWord = takeNext($word);
+            let nextWord = takeNext($word);
             switchWord($word, nextWord);
         }
     }
@@ -336,17 +335,12 @@ $(document).ready(function () {
     // styling the cursor
 
     //https://pcvector.net/scripts/other/699-izmenenie-formy-kursora-pri-navedenii-na-ssylku.html
-
-    window.onload = function () {
-        trackMouse('.cursor', '.js-pointer');
-    }
-
     function trackMouse(hover, pointer) {
 
-        var $hover = document.querySelectorAll(hover);
-        var $pointer = document.querySelector(pointer);
-        var off = 50;
-        var first = !0;
+        let $hover = document.querySelectorAll(hover);
+        let $pointer = document.querySelector(pointer);
+        let off = 50;
+        let first = !0;
 
         function mouseX(evt) {
             if (!evt) evt = window.event;
@@ -368,7 +362,7 @@ $(document).ready(function () {
                 $pointer.style.opacity = 1;
             }
 
-            TweenMax.to($pointer, .7, {
+            TweenMax.to($pointer, 0.7, {
                 left: (parseInt(mouseX(evt)) - off) + 'px',
                 top: (parseInt(mouseY(evt)) - off) + 'px',
                 ease: Power3.easeOut
@@ -388,6 +382,9 @@ $(document).ready(function () {
         })();
 
     }
+    $(window).on('load', function () {
+        trackMouse('.cursor', '.js-pointer');
+    });
 
 
     // opening the left sidebar when clicking on the ".left-sidebar__btn" button
@@ -403,12 +400,11 @@ $(document).ready(function () {
 
 
     // blocks with prices in the mobile version
-    $.easing.def = "ease";
     $('.price-more a').click(function (e) {
-        var dropDown = $(this).parent().next();
+        let dropDown = $(this).parent().next();
         $('.dropdown').not(dropDown).slideUp('slow');
         dropDown.slideToggle('slow');
-        var $parentProgram = $(this).closest('.price');
+        let $parentProgram = $(this).closest('.price');
         $('.price.activated').not($parentProgram).removeClass('activated');
         $parentProgram.toggleClass('activated');
         e.preventDefault();

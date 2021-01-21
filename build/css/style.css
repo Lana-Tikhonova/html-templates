@@ -27,6 +27,17 @@
 
     */
 /* ------ Specification ------ */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  background-color: #fff;
+}
+
 :root {
   --color-one: 155, 184, 232;
   --color-two: 139, 155, 226;
@@ -120,6 +131,54 @@
   background-color: #cb7155;
 }
 
+*,
+::after,
+::before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: transparent;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   color: var(--color-black);
@@ -140,9 +199,12 @@ form,
 input,
 a,
 span,
-button {
+button,
+textarea {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
 }
 
 h1,
@@ -157,6 +219,7 @@ h6 {
   font-size: 20px;
   line-height: 30px;
   color: var(--color-black);
+  margin: 0;
 }
 
 h2 {
@@ -766,7 +829,7 @@ textarea {
 
 /* header */
 .header {
-  background: url(../img/HEADER-BACKGROUND.jpg) no-repeat center right;
+  background: url(../img/HEADER-BACKGROUND.webp) no-repeat center right;
   background-size: cover;
   width: 100%;
   height: 100vh;
@@ -1028,6 +1091,10 @@ h1 span:hover:after {
 
 /* services */
 /* slider */
+.slider-wrapper {
+  position: relative;
+}
+
 .services-sliders {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1326,9 +1393,25 @@ h1 span:hover:after {
   position: relative;
 }
 
+.price-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
 .price {
   margin-bottom: 20px;
   position: relative;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 33.333333%;
+          flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 .price.activated .price-plus {
@@ -1434,6 +1517,34 @@ h1 span:hover:after {
 }
 
 /* contacts */
+.contact-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.communication {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 41.666667%;
+          flex: 0 0 41.666667%;
+  max-width: 41.666667%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.feedback-form {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 58.333333%;
+          flex: 0 0 58.333333%;
+  max-width: 58.333333%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
 .information {
   width: 90%;
 }
@@ -1842,6 +1953,10 @@ textarea:-ms-input-placeholder {
   }
   .price {
     margin-bottom: 30px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    max-width: 50%;
   }
   .contact-form-group {
     width: 47.63%;
@@ -1851,6 +1966,18 @@ textarea:-ms-input-placeholder {
   }
   .scroll {
     display: none;
+  }
+  .communication {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .feedback-form {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    max-width: 100%;
   }
   .information {
     width: 100%;
@@ -1918,9 +2045,16 @@ textarea:-ms-input-placeholder {
   .bg-three {
     display: none;
   }
+  .price-wrapper {
+    margin: 0;
+  }
   .price {
     margin-bottom: 0;
     padding: 19px 0 19px 0;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    max-width: 100%;
   }
   .price-title-wrapper h3 {
     width: 90%;

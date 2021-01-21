@@ -22,7 +22,7 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap"
         rel="stylesheet">
     <!-- bootstrap css -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
     <!-- slick slider -->
     <link rel="stylesheet" href="css/slick.min.css">
     <link rel="stylesheet" href="css/slick-theme.min.css">
@@ -69,8 +69,8 @@
             <!-- point group start -->
             <div class="points points__sidebar-top">
                 <img src="img/points-group.svg" alt="points">
-            </div>
-            <!-- point group end -->
+            </div> -->
+            <!-- point group end
 
             <!-- logo start-->
             <div class="logo-container">
@@ -81,9 +81,11 @@
                         <img src="img/logo-letters/svg/n.svg" alt="n">
                         <img src="img/logo-letters/svg/g.svg" alt="g">
                     </div> -->
-                    <div class="logo logo-image">
-                        <img src="img/photographer-1150052_1920.jpg" alt="n">
-                    </div>
+                    <picture class="logo logo-image">
+                        <source srcset="img/photographer-1150052_1920.webp" type="image/webp">
+                        <img src="img/photographer-1150052_1920.jpg" class="about-photo__img" alt="photographer"
+                            loading="lazy">
+                    </picture>
                 </div>
                 <div class="slogan">
                     <p>I do photography</p>
@@ -149,21 +151,17 @@
             <!-- header start -->
             <header class="header" id="home">
                 <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <h1 data-aos="fade-right" data-AOS-delay="1000">Hello <br>I’m
-                                <span>Nil Geiman </span>
-                            </h1>
-                            <div class="scroll">
-                                <div class="scroll-container">
-                                    <div class="mouse">
-                                        <span></span>
-                                    </div>
-                                    <picture>
-                                        <source srcset="img/arrowDown.svg" type="image/webp"><img
-                                            src="img/arrowDown.svg" alt="" class="arrow"></picture>
-                                </div>
+                    <h1 data-aos="fade-right" data-AOS-delay="1000">Hello <br>I’m
+                        <span>Nil Geiman </span>
+                    </h1>
+                    <div class="scroll">
+                        <div class="scroll-container">
+                            <div class="mouse">
+                                <span></span>
                             </div>
+                            <picture>
+                                <source srcset="img/arrowDown.svg" type="image/webp"><img src="img/arrowDown.svg" alt=""
+                                    class="arrow"></picture>
                         </div>
                     </div>
                 </div>
@@ -180,60 +178,54 @@
                     </svg>
                 </div>
                 <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <h2 data-aos="fade-up">About me</h2>
-                            <div class="about-text">
-                                <div class="about-photo frame frame-photo" data-aos="fade-up">
-                                    <picture>
-                                        <source srcset="img/photographer-1150052_1920.webp" type="image/webp">
-                                        <img
-                                            src="img/photographer-1150052_1920.jpg" class="about-photo__img"
-                                            alt="photographer"
-                                            loading="lazy">
-                                        </picture>
+                    <h2 data-aos="fade-up">About me</h2>
+                    <div class="about-text">
+                        <div class="about-photo frame frame-photo" data-aos="fade-up">
+                            <picture>
+                                <source srcset="img/photographer-1150052_1920.webp" type="image/webp">
+                                <img src="img/photographer-1150052_1920.jpg" class="about-photo__img" alt="photographer"
+                                    loading="lazy">
+                            </picture>
 
-                                    <!-- point group start -->
-                                    <div class="points points__about parallax-photo__points">
-                                        <img src="img/points-group.svg" alt="points">
-                                    </div>
-                                    <!-- point group end -->
+                            <!-- point group start -->
+                            <div class="points points__about parallax-photo__points">
+                                <img src="img/points-group.svg" alt="points">
+                            </div>
+                            <!-- point group end -->
 
+                        </div>
+                        <div class="about-text__paragraph text-rotating order-0" data-aos="fade-up">
+                            <div class="cd-headline clip is-full-width">
+                                <div>I’m a</div>
+                                <div class="cd-words-wrapper">
+                                    <p class="is-visible">photographer.</p>
+                                    <p>videographer.</p>
+                                    <p>photoshop wizard.</p>
+                                    <p>good guy.</p>
                                 </div>
-                                <div class="about-text__paragraph text-rotating order-0" data-aos="fade-up">
-                                    <div class="cd-headline clip is-full-width">
-                                        <div>I’m a</div>
-                                        <div class="cd-words-wrapper">
-                                            <p class="is-visible">photographer.</p>
-                                            <p>videographer.</p>
-                                            <p>photoshop wizard.</p>
-                                            <p>good guy.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <p class="about-text__paragraph" data-aos="fade-up">I love non-standard photos, crazy
-                                    people and
-                                    sun
-                                    rays!</p>
-                                <p class="about-text__paragraph" data-aos="fade-up">In enim justo, rhoncus ut, imperdiet
-                                    a,
-                                    venenatis
-                                    vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.
-                                    Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
-                                    tellus.
-                                    Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
-                                <p class="about-text__paragraph" data-aos="fade-up">Nam quam nunc, blandit vel, luctus
-                                    pulvinar,
-                                    hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae
-                                    sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci
-                                    eget
-                                    eros faucibus tincidunt.
-                                    Vivamus elementum semper nisi. Aenean vulputate eleifend
-                                    tellus.
-                                    Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. </p>
-                                <p class="about-text__paragraph" data-aos="fade-up">Order my services right now. </p>
                             </div>
                         </div>
+                        <p class="about-text__paragraph" data-aos="fade-up">I love non-standard photos, crazy
+                            people and
+                            sun
+                            rays!</p>
+                        <p class="about-text__paragraph" data-aos="fade-up">In enim justo, rhoncus ut, imperdiet
+                            a,
+                            venenatis
+                            vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.
+                            Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+                            tellus.
+                            Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
+                        <p class="about-text__paragraph" data-aos="fade-up">Nam quam nunc, blandit vel, luctus
+                            pulvinar,
+                            hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae
+                            sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci
+                            eget
+                            eros faucibus tincidunt.
+                            Vivamus elementum semper nisi. Aenean vulputate eleifend
+                            tellus.
+                            Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. </p>
+                        <p class="about-text__paragraph" data-aos="fade-up">Order my services right now. </p>
                     </div>
                 </div>
             </section>
@@ -242,156 +234,132 @@
             <!-- services start -->
             <section class="services section" id="services">
                 <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <h2 data-aos="fade-up">Services</h2>
+                    <h2 data-aos="fade-up">Services</h2>
+
+                    <!-- slider start -->
+                    <div class="slider-wrapper">
+                        <h3 class="subtitle" data-aos="fade-up">
+                            I suggest you familiarize yourself with my services
+                        </h3>
+                        <div class="sliders-arrow sliders-arrow__prev cursor">
+                            <span class="sliders-arrow__left"></span>
+                            <span class="sliders-arrow__right"></span>
                         </div>
-                        <div class="col-12">
-                            <h3 class="subtitle" data-aos="fade-up">
-                                I suggest you familiarize yourself with my services
-                            </h3>
-                            <div class="sliders-arrow sliders-arrow__prev cursor">
-                                <span class="sliders-arrow__left"></span>
-                                <span class="sliders-arrow__right"></span>
-                            </div>
-                            <!-- slider start -->
-                            <div class="services-sliders sliders" data-aos="fade-up">
-
-                                <div class="services-sliders__item slider">
-                                    <div class="services-sliders__wrap">
-                                        <h4 class="slider__title">Photo session</h4>
-                                        <div class="slider__block">
-                                            <p class="slider__subtitle">Vivamus elementum semper nisi</p>
-                                            <p class="slider__text">Aenean vulputate eleifend tellus. Aenean leo
-                                                ligula, porttitor eu,
-                                                consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="services-sliders__item slider">
-                                    <div class="services-sliders__wrap">
-                                        <h4 class="slider__title">Video shooting</h4>
-                                        <div class="slider__block">
-                                            <p class="slider__subtitle">Nullam dictum felis eu pede mollis pretium.
-                                                Integer tincidunt</p>
-                                            <p class="slider__text">Sed fringilla mauris sit amet nibh. Donec sodales
-                                                sagittis magna. Sed consequat.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="services-sliders__item slider">
-                                    <div class="services-sliders__wrap">
-                                        <h4 class="slider__title">Photo montages</h4>
-                                        <div class="slider__block">
-                                            <p class="slider__subtitle">Lorem ipsum</p>
-                                            <p class="slider__text">Cum sociis natoque penatibus et magnis dis
-                                                parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies
-                                                nec, pellentesque eu, pretium quis, sem</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="services-sliders__item slider">
-                                    <div class="services-sliders__wrap">
-                                        <h4 class="slider__title">Photo session</h4>
-                                        <div class="slider__block">
-                                            <p class="slider__subtitle">Vivamus elementum semper nisi</p>
-                                            <p class="slider__text">Aenean vulputate eleifend tellus. Aenean leo
-                                                ligula, porttitor eu,
-                                                consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="services-sliders__item slider">
-                                    <div class="services-sliders__wrap">
-                                        <h4 class="slider__title">Video shooting</h4>
-                                        <div class="slider__block">
-                                            <p class="slider__subtitle">Nullam dictum felis eu pede mollis pretium.
-                                                Integer tincidunt</p>
-                                            <p class="slider__text">Sed fringilla mauris sit amet nibh. Donec sodales
-                                                sagittis magna. Sed consequat.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="services-sliders__item slider">
-                                    <div class="services-sliders__wrap">
-                                        <h4 class="slider__title">Photo montages</h4>
-                                        <div class="slider__block">
-                                            <p class="slider__subtitle">Lorem ipsum</p>
-                                            <p class="slider__text">Cum sociis natoque penatibus et magnis dis
-                                                parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies
-                                                nec, pellentesque eu, pretium quis, sem</p>
-                                        </div>
+                        <div class="services-sliders sliders" data-aos="fade-up">
+                            <div class="services-sliders__item slider">
+                                <div class="services-sliders__wrap">
+                                    <h4 class="slider__title">Photo session</h4>
+                                    <div class="slider__block">
+                                        <p class="slider__subtitle">Vivamus elementum semper nisi</p>
+                                        <p class="slider__text">Aenean vulputate eleifend tellus. Aenean leo
+                                            ligula, porttitor eu,
+                                            consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus.</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="sliders-arrow sliders-arrow__next cursor">
-                                <span class="sliders-arrow__left"></span>
-                                <span class="sliders-arrow__right"></span>
+                            <div class="services-sliders__item slider">
+                                <div class="services-sliders__wrap">
+                                    <h4 class="slider__title">Video shooting</h4>
+                                    <div class="slider__block">
+                                        <p class="slider__subtitle">Nullam dictum felis eu pede mollis pretium.
+                                            Integer tincidunt</p>
+                                        <p class="slider__text">Sed fringilla mauris sit amet nibh. Donec sodales
+                                            sagittis magna. Sed consequat.</p>
+                                    </div>
+                                </div>
                             </div>
-                            <!-- slider end -->
-
+                            <div class="services-sliders__item slider">
+                                <div class="services-sliders__wrap">
+                                    <h4 class="slider__title">Photo montages</h4>
+                                    <div class="slider__block">
+                                        <p class="slider__subtitle">Lorem ipsum</p>
+                                        <p class="slider__text">Cum sociis natoque penatibus et magnis dis
+                                            parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies
+                                            nec, pellentesque eu, pretium quis, sem</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="services-sliders__item slider">
+                                <div class="services-sliders__wrap">
+                                    <h4 class="slider__title">Photo session</h4>
+                                    <div class="slider__block">
+                                        <p class="slider__subtitle">Vivamus elementum semper nisi</p>
+                                        <p class="slider__text">Aenean vulputate eleifend tellus. Aenean leo
+                                            ligula, porttitor eu,
+                                            consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                        <div class="sliders-arrow sliders-arrow__next cursor">
+                            <span class="sliders-arrow__left"></span>
+                            <span class="sliders-arrow__right"></span>
+                        </div>
+                    </div>
+                    <!-- slider end -->
 
-                        <div class="col-12">
-                            <h3 class="subtitle" data-aos="fade-up">
-                                I have these skills:
-                            </h3>
-                            <div class="skills">
-                                <div class="skills-block">
-                                    <div class="skills-block__wrapper" data-aos="fade-up">
-                                        <p class="skills-block__title">Photoshop</p>
-                                        <div class="skills-block__item">
-                                            <span style="width: 90%;">
-                                            </span>
-                                            <p>90%</p>
-                                        </div>
-                                    </div>
-                                    <div class="skills-block__wrapper" data-aos="fade-up">
-                                        <p class="skills-block__title">Сreativity</p>
-                                        <div class="skills-block__item">
-                                            <span style="width: 64%;">
-                                            </span>
-                                            <p>64%</p>
-                                        </div>
-                                    </div>
-                                    <div class="skills-block__wrapper" data-aos="fade-up">
-                                        <p class="skills-block__title">Lighting</p>
-                                        <div class="skills-block__item">
-                                            <span style="width: 50%;">
-                                            </span>
-                                            <p>50%</p>
-                                        </div>
+                    <!-- skills start -->
+                    <div>
+                        <h3 class="subtitle" data-aos="fade-up">
+                            I have these skills:
+                        </h3>
+                        <div class="skills">
+                            <div class="skills-block">
+                                <div class="skills-block__wrapper" data-aos="fade-up">
+                                    <p class="skills-block__title">Photoshop</p>
+                                    <div class="skills-block__item">
+                                        <span style="width: 90%;">
+                                        </span>
+                                        <p>90%</p>
                                     </div>
                                 </div>
-                                <div class="skills-block">
-                                    <div class="skills-block__wrapper" data-aos="fade-up">
-                                        <p class="skills-block__title">Illustrator</p>
-                                        <div class="skills-block__item">
-                                            <span style="width: 78%;">
-                                            </span>
-                                            <p>78%</p>
-                                        </div>
+                                <div class="skills-block__wrapper" data-aos="fade-up">
+                                    <p class="skills-block__title">Сreativity</p>
+                                    <div class="skills-block__item">
+                                        <span style="width: 64%;">
+                                        </span>
+                                        <p>64%</p>
                                     </div>
-                                    <div class="skills-block__wrapper" data-aos="fade-up">
-                                        <p class="skills-block__title">Inspiration</p>
-                                        <div class="skills-block__item">
-                                            <span style="width: 23%;">
-                                            </span>
-                                            <p>23%</p>
-                                        </div>
+                                </div>
+                                <div class="skills-block__wrapper" data-aos="fade-up">
+                                    <p class="skills-block__title">Lighting</p>
+                                    <div class="skills-block__item">
+                                        <span style="width: 50%;">
+                                        </span>
+                                        <p>50%</p>
                                     </div>
-                                    <div class="skills-block__wrapper" data-aos="fade-up">
-                                        <p class="skills-block__title">Frame</p>
-                                        <div class="skills-block__item">
-                                            <span style="width: 75%;">
-                                            </span>
-                                            <p>75%</p>
-                                        </div>
+                                </div>
+                            </div>
+                            <div class="skills-block">
+                                <div class="skills-block__wrapper" data-aos="fade-up">
+                                    <p class="skills-block__title">Illustrator</p>
+                                    <div class="skills-block__item">
+                                        <span style="width: 78%;">
+                                        </span>
+                                        <p>78%</p>
+                                    </div>
+                                </div>
+                                <div class="skills-block__wrapper" data-aos="fade-up">
+                                    <p class="skills-block__title">Inspiration</p>
+                                    <div class="skills-block__item">
+                                        <span style="width: 23%;">
+                                        </span>
+                                        <p>23%</p>
+                                    </div>
+                                </div>
+                                <div class="skills-block__wrapper" data-aos="fade-up">
+                                    <p class="skills-block__title">Frame</p>
+                                    <div class="skills-block__item">
+                                        <span style="width: 75%;">
+                                        </span>
+                                        <p>75%</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <!-- skills end -->
+
                 </div>
             </section>
             <!-- services end -->
@@ -404,100 +372,92 @@
                         <path
                             d="M-21.378 1429.29C126.856 1430.83 204.652 1357.79 336.001 1297.5C419.995 1258.94 366.413 1051.74 439.039 1023.08C512.198 994.216 533.744 846.564 637.5 766.499C675.741 736.99 1274.93 616.182 1121 484.5C1024.27 408.688 662.741 425.186 534.5 395C226.941 267.181 498 202.5 364 32C261.92 -48.3528 161.838 125.923 81.08 130.354C-30.4364 136.474 -106.028 48.7875 -143.655 10.9988L-179 1503.08C-106.059 1503.05 -88.6103 1428.59 -21.378 1429.29Z" />
                     </svg>
-
                 </div>
                 <div class="container">
 
                     <!-- point group start -->
-                    <div class="points points__portfolio">
+                    <div class="points points__portfolio" data-aos="fade-up">
                         <img src="img/points-group-dark.svg" alt="points">
                     </div>
                     <!-- point group end -->
 
-                    <div class="row">
-                        <div class="col-12">
-                            <h2 data-aos="fade-up">Portfolio</h2>
-                        </div>
-                        <div class="col-12">
-                            <div class="wrapper" data-aos="fade-up">
-                                <div class="masonry-gallery">
-                                    <div class="masonry-gallery__item cursor">
-                                        <picture>
-                                            <source srcset="img/portfolio-img-5.webp" type="image/webp"><img
-                                                src="img/portfolio-img-5.jpg" alt="" loading="lazy"></picture>
-                                    </div>
-                                    <div class="masonry-gallery__item cursor">
-                                        <picture>
-                                            <source srcset="img/portfolio-img-10.webp" type="image/webp"><img
-                                                src="img/portfolio-img-10.jpg" alt="" loading="lazy"></picture>
-                                    </div>
-                                    <div class="masonry-gallery__item cursor">
-                                        <picture>
-                                            <source srcset="img/portfolio-img-6.webp" type="image/webp"><img
-                                                src="img/portfolio-img-6.jpg" alt="" loading="lazy"></picture>
-                                    </div>
-                                    <div class="masonry-gallery__item cursor">
-                                        <picture>
-                                            <source srcset="img/portfolio-img-12.webp" type="image/webp"><img
-                                                src="img/portfolio-img-12.jpg" alt="" loading="lazy"></picture>
-                                    </div>
-                                    <div class="masonry-gallery__item cursor">
-                                        <picture>
-                                            <source srcset="img/portfolio-img-4.webp" type="image/webp"><img
-                                                src="img/portfolio-img-4.jpg" alt="" loading="lazy"></picture>
-                                    </div>
-                                    <div class="masonry-gallery__item cursor">
-                                        <picture>
-                                            <source srcset="img/portfolio-img-3.webp" type="image/webp"><img
-                                                src="img/portfolio-img-3.jpg" alt="" loading="lazy"></picture>
-                                    </div>
-                                    <div class="masonry-gallery__item cursor">
-                                        <picture>
-                                            <source srcset="img/portfolio-img-1.webp" type="image/webp"><img
-                                                src="img/portfolio-img-1.jpg" alt="" loading="lazy"></picture>
-                                    </div>
-                                    <div class="masonry-gallery__item cursor">
-                                        <picture>
-                                            <source srcset="img/portfolio-img-8.webp" type="image/webp"><img
-                                                src="img/portfolio-img-8.jpg" alt="" loading="lazy"></picture>
-                                    </div>
-                                    <div class="masonry-gallery__item cursor">
-                                        <picture>
-                                            <source srcset="img/portfolio-img-9.webp" type="image/webp"><img
-                                                src="img/portfolio-img-9.jpg" alt="" loading="lazy"></picture>
-                                    </div>
-                                    <div class="masonry-gallery__item cursor">
-                                        <picture>
-                                            <source srcset="img/portfolio-img-7.webp" type="image/webp"><img
-                                                src="img/portfolio-img-7.jpg" alt="" loading="lazy"></picture>
-                                    </div>
-                                    <div class="masonry-gallery__item cursor">
-                                        <picture>
-                                            <source srcset="img/portfolio-img-2.webp" type="image/webp"><img
-                                                src="img/portfolio-img-2.jpg" alt="" loading="lazy"></picture>
-                                    </div>
-                                    <div class="masonry-gallery__item cursor">
-                                        <picture>
-                                            <source srcset="img/portfolio-img-11.webp" type="image/webp"><img
-                                                src="img/portfolio-img-11.jpg" alt="" loading="lazy"></picture>
-                                    </div>
-                                    <div class="masonry-gallery__item cursor">
-                                        <picture>
-                                            <source srcset="img/portfolio-img-13.webp" type="image/webp"><img
-                                                src="img/portfolio-img-13.jpg" alt="" loading="lazy"></picture>
-                                    </div>
-                                    <div class="masonry-gallery__item cursor">
-                                        <picture>
-                                            <source srcset="img/portfolio-img-14.webp" type="image/webp"><img
-                                                src="img/portfolio-img-14.jpg" alt="" loading="lazy"></picture>
-                                    </div>
-                                    <div class="masonry-gallery__item cursor">
-                                        <picture>
-                                            <source srcset="img/portfolio-img-15.webp" type="image/webp"><img
-                                                src="img/portfolio-img-15.jpg" alt="" loading="lazy"></picture>
-                                    </div>
-
-                                </div>
+                    <h2 data-aos="fade-up">Portfolio</h2>
+                    <div class="wrapper" data-aos="fade-up">
+                        <div class="masonry-gallery">
+                            <div class="masonry-gallery__item cursor">
+                                <picture>
+                                    <source srcset="img/portfolio-img-5.webp" type="image/webp"><img
+                                        src="img/portfolio-img-5.jpg" alt="" loading="lazy"></picture>
+                            </div>
+                            <div class="masonry-gallery__item cursor">
+                                <picture>
+                                    <source srcset="img/portfolio-img-10.webp" type="image/webp"><img
+                                        src="img/portfolio-img-10.jpg" alt="" loading="lazy"></picture>
+                            </div>
+                            <div class="masonry-gallery__item cursor">
+                                <picture>
+                                    <source srcset="img/portfolio-img-6.webp" type="image/webp"><img
+                                        src="img/portfolio-img-6.jpg" alt="" loading="lazy"></picture>
+                            </div>
+                            <div class="masonry-gallery__item cursor">
+                                <picture>
+                                    <source srcset="img/portfolio-img-12.webp" type="image/webp"><img
+                                        src="img/portfolio-img-12.jpg" alt="" loading="lazy"></picture>
+                            </div>
+                            <div class="masonry-gallery__item cursor">
+                                <picture>
+                                    <source srcset="img/portfolio-img-4.webp" type="image/webp"><img
+                                        src="img/portfolio-img-4.jpg" alt="" loading="lazy"></picture>
+                            </div>
+                            <div class="masonry-gallery__item cursor">
+                                <picture>
+                                    <source srcset="img/portfolio-img-3.webp" type="image/webp"><img
+                                        src="img/portfolio-img-3.jpg" alt="" loading="lazy"></picture>
+                            </div>
+                            <div class="masonry-gallery__item cursor">
+                                <picture>
+                                    <source srcset="img/portfolio-img-1.webp" type="image/webp"><img
+                                        src="img/portfolio-img-1.jpg" alt="" loading="lazy"></picture>
+                            </div>
+                            <div class="masonry-gallery__item cursor">
+                                <picture>
+                                    <source srcset="img/portfolio-img-8.webp" type="image/webp"><img
+                                        src="img/portfolio-img-8.jpg" alt="" loading="lazy"></picture>
+                            </div>
+                            <div class="masonry-gallery__item cursor">
+                                <picture>
+                                    <source srcset="img/portfolio-img-9.webp" type="image/webp"><img
+                                        src="img/portfolio-img-9.jpg" alt="" loading="lazy"></picture>
+                            </div>
+                            <div class="masonry-gallery__item cursor">
+                                <picture>
+                                    <source srcset="img/portfolio-img-7.webp" type="image/webp"><img
+                                        src="img/portfolio-img-7.jpg" alt="" loading="lazy"></picture>
+                            </div>
+                            <div class="masonry-gallery__item cursor">
+                                <picture>
+                                    <source srcset="img/portfolio-img-2.webp" type="image/webp"><img
+                                        src="img/portfolio-img-2.jpg" alt="" loading="lazy"></picture>
+                            </div>
+                            <div class="masonry-gallery__item cursor">
+                                <picture>
+                                    <source srcset="img/portfolio-img-11.webp" type="image/webp"><img
+                                        src="img/portfolio-img-11.jpg" alt="" loading="lazy"></picture>
+                            </div>
+                            <div class="masonry-gallery__item cursor">
+                                <picture>
+                                    <source srcset="img/portfolio-img-13.webp" type="image/webp"><img
+                                        src="img/portfolio-img-13.jpg" alt="" loading="lazy"></picture>
+                            </div>
+                            <div class="masonry-gallery__item cursor">
+                                <picture>
+                                    <source srcset="img/portfolio-img-14.webp" type="image/webp"><img
+                                        src="img/portfolio-img-14.jpg" alt="" loading="lazy"></picture>
+                            </div>
+                            <div class="masonry-gallery__item cursor">
+                                <picture>
+                                    <source srcset="img/portfolio-img-15.webp" type="image/webp"><img
+                                        src="img/portfolio-img-15.jpg" alt="" loading="lazy"></picture>
                             </div>
                         </div>
                     </div>
@@ -508,163 +468,152 @@
             <!-- price start -->
             <section class="prices section" id="price">
                 <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <h2 data-aos="fade-up">Price</h2>
-                        </div>
+                    <h2 data-aos="fade-up">Price</h2>
 
+                    <div class="price-wrapper">
                         <!-- price item -->
-                        <div class="col-lg-4 col-md-6">
-                            <div class="price" data-aos="fade-up">
-                                <div class="price-title-wrapper">
-                                    <h3 class="subtitle">
-                                        Personal photoshoot
-                                    </h3>
-                                    <div class="price-plus"></div>
+                        <div class="price" data-aos="fade-up">
+                            <div class="price-title-wrapper">
+                                <h3 class="subtitle">
+                                    Personal photoshoot
+                                </h3>
+                                <div class="price-plus"></div>
+                            </div>
+                            <div class="price-more">
+                                <a href="#"></a>
+                            </div>
+                            <div class="dropdown">
+                                <div class="price-block">
+                                    <p>Shooting 1 hour – €199</p>
+                                    <p>All raw photos (100-200)</p>
+                                    <p>25 processed photos</p>
                                 </div>
-                                <div class="price-more">
-                                    <a href="#"></a>
+                                <div class="price-block">
+                                    <p>Shooting 2 hour – €240</p>
+                                    <p>All raw photos (200-300)</p>
+                                    <p>35 processed photos</p>
+                                    <p>Shooting from multiple locations</p>
                                 </div>
-                                <div class="dropdown">
-                                    <div class="price-block">
-                                        <p>Shooting 1 hour – €199</p>
-                                        <p>All raw photos (100-200)</p>
-                                        <p>25 processed photos</p>
-                                    </div>
-                                    <div class="price-block">
-                                        <p>Shooting 2 hour – €240</p>
-                                        <p>All raw photos (200-300)</p>
-                                        <p>35 processed photos</p>
-                                        <p>Shooting from multiple locations</p>
-                                    </div>
-                                    <div class="price-block">
-                                        <p>Shooting 3 hour – €380</p>
-                                        <p>All raw photos (300-400)</p>
-                                        <p>50 processed photos</p>
-                                        <p>Shooting in three or four locations</p>
-                                    </div>
+                                <div class="price-block">
+                                    <p>Shooting 3 hour – €380</p>
+                                    <p>All raw photos (300-400)</p>
+                                    <p>50 processed photos</p>
+                                    <p>Shooting in three or four locations</p>
                                 </div>
                             </div>
                         </div>
 
                         <!-- price item -->
-                        <div class="col-lg-4 col-md-6">
-                            <div class="price" data-aos="fade-up">
-                                <div class="price-title-wrapper">
-                                    <h3 class="subtitle">
-                                        Photo session for lovers / photo session for two
-                                    </h3>
-                                    <div class="price-plus"></div>
+                        <div class="price" data-aos="fade-up">
+                            <div class="price-title-wrapper">
+                                <h3 class="subtitle">
+                                    Photo session for lovers / photo session for two
+                                </h3>
+                                <div class="price-plus"></div>
+                            </div>
+                            <div class="price-more">
+                                <a href="#"></a>
+                            </div>
+                            <div class="dropdown">
+                                <div class="price-block">
+                                    <p>Shooting 1 hour – €230</p>
+                                    <p>All raw photos (150-250)</p>
+                                    <p>30 processed photos</p>
                                 </div>
-                                <div class="price-more">
-                                    <a href="#"></a>
+                                <div class="price-block">
+                                    <p>Shooting 2 hour – €350</p>
+                                    <p>All raw photos (400-500)</p>
+                                    <p>40 processed photos</p>
+                                    <p>Shooting in two or three locations</p>
                                 </div>
-                                <div class="dropdown">
-                                    <div class="price-block">
-                                        <p>Shooting 1 hour – €230</p>
-                                        <p>All raw photos (150-250)</p>
-                                        <p>30 processed photos</p>
-                                    </div>
-                                    <div class="price-block">
-                                        <p>Shooting 2 hour – €350</p>
-                                        <p>All raw photos (400-500)</p>
-                                        <p>40 processed photos</p>
-                                        <p>Shooting in two or three locations</p>
-                                    </div>
-                                    <div class="price-block">
-                                        <p>Shooting 3 hour – €420</p>
-                                        <p>All raw photos (500-600)</p>
-                                        <p>50 processed photos</p>
-                                        <p>Shooting in three or four locations</p>
-                                    </div>
+                                <div class="price-block">
+                                    <p>Shooting 3 hour – €420</p>
+                                    <p>All raw photos (500-600)</p>
+                                    <p>50 processed photos</p>
+                                    <p>Shooting in three or four locations</p>
                                 </div>
                             </div>
                         </div>
 
                         <!-- price item -->
-                        <div class="col-lg-4 col-md-6">
-                            <div class="price" data-aos="fade-up">
-                                <div class="price-title-wrapper">
-                                    <h3 class="subtitle">
-                                        Wedding photography
-                                    </h3>
-                                    <div class="price-plus"></div>
+                        <div class="price" data-aos="fade-up">
+                            <div class="price-title-wrapper">
+                                <h3 class="subtitle">
+                                    Wedding photography
+                                </h3>
+                                <div class="price-plus"></div>
+                            </div>
+                            <div class="price-more">
+                                <a href="#"></a>
+                            </div>
+                            <div class="dropdown">
+                                <div class="price-block">
+                                    <p>Shooting 3 hour – €500</p>
+                                    <p>All raw photos (450-600)</p>
+                                    <p>45 processed photos</p>
+                                    <p>Deposit for booking date -€100</p>
                                 </div>
-                                <div class="price-more">
-                                    <a href="#"></a>
+                                <div class="price-block">
+                                    <p>Shooting 5 hour – €800</p>
+                                    <p>All raw photos (700-1200)</p>
+                                    <p>60 processed photos</p>
+                                    <p>Deposit for booking date -€300 </p>
                                 </div>
-                                <div class="dropdown">
-                                    <div class="price-block">
-                                        <p>Shooting 3 hour – €500</p>
-                                        <p>All raw photos (450-600)</p>
-                                        <p>45 processed photos</p>
-                                        <p>Deposit for booking date -€100</p>
-                                    </div>
-                                    <div class="price-block">
-                                        <p>Shooting 5 hour – €800</p>
-                                        <p>All raw photos (700-1200)</p>
-                                        <p>60 processed photos</p>
-                                        <p>Deposit for booking date -€300 </p>
-                                    </div>
-                                    <div class="price-block">
-                                        <p>Shooting 10 hour – €1500</p>
-                                        <p>All raw photos (1200-1900)</p>
-                                        <p>90 processed photos</p>
-                                        <p>Deposit for booking date -€500 </p>
-                                    </div>
-                                    <div class="price-block">
-                                        <p>Extra hour +€150/hr for any package</p>
-                                    </div>
+                                <div class="price-block">
+                                    <p>Shooting 10 hour – €1500</p>
+                                    <p>All raw photos (1200-1900)</p>
+                                    <p>90 processed photos</p>
+                                    <p>Deposit for booking date -€500 </p>
+                                </div>
+                                <div class="price-block">
+                                    <p>Extra hour +€150/hr for any package</p>
                                 </div>
                             </div>
                         </div>
 
                         <!-- price item -->
-                        <div class="col-lg-4 col-md-6">
-                            <div class="price" data-aos="fade-up">
-                                <div class="price-title-wrapper">
-                                    <h3 class="subtitle">
-                                        Video shoot
-                                    </h3>
-                                    <div class="price-plus"></div>
-                                </div>
-                                <div class="price-more">
-                                    <a href="#"></a>
-                                </div>
-                                <div class="dropdown">
-                                    <div class="price-block">
-                                        <p>Shooting 3 hour – €700</p>
-                                        <p>Included in the price:</p>
-                                        <p>- departure with your own equipment;</p>
-                                        <p>- glued shooting maters;</p>
-                                        <p>- archive of raw videos.</p>
-                                    </div>
+                        <div class="price" data-aos="fade-up">
+                            <div class="price-title-wrapper">
+                                <h3 class="subtitle">
+                                    Video shoot
+                                </h3>
+                                <div class="price-plus"></div>
+                            </div>
+                            <div class="price-more">
+                                <a href="#"></a>
+                            </div>
+                            <div class="dropdown">
+                                <div class="price-block">
+                                    <p>Shooting 3 hour – €700</p>
+                                    <p>Included in the price:</p>
+                                    <p>- departure with your own equipment;</p>
+                                    <p>- glued shooting maters;</p>
+                                    <p>- archive of raw videos.</p>
                                 </div>
                             </div>
                         </div>
 
                         <!-- price item -->
-                        <div class="col-lg-4 col-md-6">
-                            <div class="price" data-aos="fade-up">
-                                <div class="price-title-wrapper">
-                                    <h3 class="subtitle">
-                                        Photo processing
-                                    </h3>
-                                    <div class="price-plus"></div>
-                                </div>
-                                <div class="price-more">
-                                    <a href="#"></a>
-                                </div>
-                                <div class="dropdown">
-                                    <div class="price-block">
-                                        <p>You can also provide me with photos for processing.</p>
-                                        <p>Processing 30 photos - €200</p>
-                                        <p>The next photo goes for € 13</p>
-                                    </div>
+                        <div class="price" data-aos="fade-up">
+                            <div class="price-title-wrapper">
+                                <h3 class="subtitle">
+                                    Photo processing
+                                </h3>
+                                <div class="price-plus"></div>
+                            </div>
+                            <div class="price-more">
+                                <a href="#"></a>
+                            </div>
+                            <div class="dropdown">
+                                <div class="price-block">
+                                    <p>You can also provide me with photos for processing.</p>
+                                    <p>Processing 30 photos - €200</p>
+                                    <p>The next photo goes for € 13</p>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </section>
             <!-- price end -->
@@ -679,13 +628,11 @@
 
                 </div>
                 <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <h2 data-aos="fade-up">Contacts</h2>
-                        </div>
+                    <h2 data-aos="fade-up">Contacts</h2>
 
+                    <div class="contact-wrapper">
                         <!-- communication start -->
-                        <div class="col-lg-5">
+                        <div class="communication">
                             <h3 class="subtitle" data-aos="fade-up">
                                 Contact me in any convenient way
                             </h3>
@@ -729,7 +676,7 @@
                         <!-- communication end -->
 
                         <!-- feedback form start -->
-                        <div class="col-lg-7">
+                        <div class="feedback-form">
                             <h3 class="subtitle" data-aos="fade-up">
                                 Write me an email with your ideas
                             </h3>
@@ -758,11 +705,7 @@
             <!-- footer start-->
             <footer class="footer">
                 <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <p class="copyright">© 2020 Svetlana Tikhonova. All rights reserved.</p>
-                        </div>
-                    </div>
+                    <p class="copyright">© 2020 Svetlana Tikhonova. All rights reserved.</p>
                 </div>
             </footer>
             <!-- footer end-->
@@ -788,8 +731,6 @@
 
     <!-- jquery -->
     <script src="js/jquery-3.3.1.min.js"></script>
-    <!-- bootstrap -->
-    <script src="js/bootstrap.min.js"></script>
     <!-- TweenMax - JavaScript animation -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
     <!-- slick slider -->
@@ -805,7 +746,6 @@
         });
     </script>
     <!-- script.js -->
-    <!-- <script src="js/script.min.js"></script> -->
     <script src="js/script.js"></script>
 </body>
 

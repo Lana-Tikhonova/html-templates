@@ -29,6 +29,16 @@
 
 
 /* ------ Specification ------ */
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+}
 
 :root {
     --color-one: 155, 184, 232;
@@ -123,6 +133,55 @@
     }
 }
 
+*,
+::after,
+::before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+
+}
+
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -ms-overflow-style: scrollbar;
+    -webkit-tap-highlight-color: transparent;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     color: var(--color-black);
@@ -143,8 +202,11 @@ form,
 input,
 a,
 span,
-button {
+button,
+textarea {
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
 }
 
 h1,
@@ -159,6 +221,7 @@ h6 {
     font-size: 20px;
     line-height: 30px;
     color: var(--color-black);
+    margin: 0;
 }
 
 h2 {
@@ -495,29 +558,33 @@ textarea {
     margin: 0 auto;
     position: absolute;
 }
-.logo-image{
-    top:50%;
+
+.logo-image {
+    top: 50%;
     left: 50%;
     width: 130px;
     height: 90px;
     margin-top: -45px;
     margin-left: -65px;
-    
-    img{
+
+    img {
         width: 100%;
         object-fit: cover;
     }
-    &:after{
+
+    &:after {
         position: absolute;
         width: 100%;
         height: 100%;
-        background-color: rgba(var(--color-one), 0.4);;
+        background-color: rgba(var(--color-one), 0.4);
+        ;
         content: ' ';
         display: block;
-        
+
     }
 
 }
+
 // .logo-icon{
 //     top: 7%;
 //     img {
@@ -568,7 +635,8 @@ textarea {
         border-width: 0 0 3px 3px
     }
 }
-.frame-logo{
+
+.frame-logo {
     width: 170px;
     height: 110px;
     position: relative;
@@ -590,26 +658,27 @@ textarea {
         display: block;
     }
 
-    &_left{
+    &_left {
         &:before {
             top: 0;
-            left:0;
+            left: 0;
             border-width: 1px 0 0 1px
         }
-    
+
         &:after {
             bottom: 0;
             left: 0;
             border-width: 0 0 1px 1px
         }
     }
-    &_right{
+
+    &_right {
         &:before {
             top: 0;
             right: 0;
             border-width: 1px 1px 0 0
         }
-    
+
         &:after {
             bottom: 0;
             right: 0;
@@ -758,7 +827,7 @@ textarea {
 /* header */
 
 .header {
-    background: url(../img/HEADER-BACKGROUND.jpg) no-repeat center right;
+    background: url(../img/HEADER-BACKGROUND.webp) no-repeat center right;
     background-size: cover;
     width: 100%;
     height: 100vh;
@@ -766,14 +835,14 @@ textarea {
     max-height: 1000px;
     position: relative;
 
-    &:before{
-        content:'';
+    &:before {
+        content: '';
         display: block;
         position: absolute;
-        top:0;
+        top: 0;
         left: 0;
         right: 0;
-        bottom:0;
+        bottom: 0;
         width: 100%;
         height: 100%;
         background-color: var(--color-black);
@@ -990,6 +1059,9 @@ h1 {
 /* services */
 
 /* slider */
+.slider-wrapper {
+    position: relative;
+}
 
 .services-sliders {
     display: flex;
@@ -1278,9 +1350,21 @@ h1 {
     position: relative;
 }
 
+.price-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+
+}
+
 .price {
     margin-bottom: 20px;
     position: relative;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+    padding-right: 15px;
+    padding-left: 15px;
 
     &.activated .price-plus {
         transform: rotate(-45deg);
@@ -1381,6 +1465,27 @@ h1 {
 }
 
 /* contacts */
+.contact-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+
+}
+
+.communication {
+    flex: 0 0 41.666667%;
+    max-width: 41.666667%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.feedback-form {
+    flex: 0 0 58.333333%;
+    max-width: 58.333333%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
 
 .information {
     width: 90%;
@@ -1609,16 +1714,19 @@ textarea:-ms-input-placeholder {
     .left-sidebar {
         width: 175px;
     }
+
     .frame-logo {
         width: 120px;
         height: 87px;
     }
+
     .logo-image {
         width: 100px;
         height: 70px;
         margin-top: -35px;
         margin-left: -50px;
     }
+
     // .logo-icon img {
     //     &:first-child {
     //         margin-left: 5px;
@@ -1773,6 +1881,7 @@ textarea:-ms-input-placeholder {
 
 /* 767-991px */
 @media screen and (max-width: 991px) {
+
     .menu__item.active {
         width: 175px;
     }
@@ -1811,6 +1920,8 @@ textarea:-ms-input-placeholder {
 
     .price {
         margin-bottom: 30px;
+        flex: 0 0 50%;
+        max-width: 50%;
     }
 
     .contact-form-group {
@@ -1823,6 +1934,16 @@ textarea:-ms-input-placeholder {
 
     .scroll {
         display: none;
+    }
+
+    .communication {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .feedback-form {
+        flex: 0 0 100%;
+        max-width: 100%;
     }
 
     .information {
@@ -1902,9 +2023,15 @@ textarea:-ms-input-placeholder {
         display: none;
     }
 
+    .price-wrapper {
+        margin: 0;
+    }
+
     .price {
         margin-bottom: 0;
         padding: 19px 0 19px 0;
+        flex: 0 0 100%;
+        max-width: 100%;
     }
 
     .price-title-wrapper h3 {
@@ -2090,12 +2217,14 @@ textarea:-ms-input-placeholder {
     }
 
     .left-sidebar::-webkit-scrollbar-track {
-        background-color: rgba(var(--color-one), 1);;
+        background-color: rgba(var(--color-one), 1);
+        ;
         height: 2000px;
     }
 
     .left-sidebar::-webkit-scrollbar-thumb {
-        background-color: rgba(var(--color-two), 1);;
+        background-color: rgba(var(--color-two), 1);
+        ;
         -webkit-border-radius: 0px;
         border-radius: 0px;
         -moz-border-radius: 0px;
