@@ -1331,16 +1331,7 @@ h1 {
         -o-transition: var(--transition);
     }
 }
-.masonry-gallery__item img.lazyload {
-	opacity: 0;
-	transform: scale(0.8);
-}
 
-.masonry-gallery__item img.lazyloaded {
-	opacity: 1;
-	transform: scale(1);
-	transition: all 700ms;
-}
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
     .masonry-gallery {
         column-count: 2;
