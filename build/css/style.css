@@ -1374,6 +1374,20 @@ h1 span:hover:after {
   -o-transition: var(--transition);
 }
 
+.masonry-gallery__item img.lazyload {
+  opacity: 0;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+.masonry-gallery__item img.lazyloaded {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 700ms;
+  transition: all 700ms;
+}
+
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .masonry-gallery {
     -webkit-column-count: 2;
