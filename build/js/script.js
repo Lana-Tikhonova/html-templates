@@ -396,11 +396,18 @@ $(document).ready(function () {
         $(this).toggleClass('active');
     });
 
+    // closes the left sidebar when you click on the page button or menu item
     $('.menu__item').on('click', function () {
-        $('.left-sidebar').toggleClass('active');
-        $('.left-sidebar__btn').toggleClass('active');
+        $('.left-sidebar').removeClass('active');
+        $('.left-sidebar__btn').removeClass('active');
     });
 
+    $(document).on('click', function (e) {
+        if (!e.target.closest('.left-sidebar__btn, .left-sidebar')) {
+            $('.left-sidebar').removeClass('active');
+            $('.left-sidebar__btn').removeClass('active');
+        }
+    });
 
     // blocks with prices in the mobile version
     $('.price-more a').click(function (e) {

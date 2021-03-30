@@ -523,11 +523,7 @@ textarea {
     height: 100%;
     background-color: var(--color-black);
     z-index: 100;
-    transition: var(--transition);
-    -webkit-transition: var(--transition);
-    -moz-transition: var(--transition);
-    -ms-transition: var(--transition);
-    -o-transition: var(--transition);
+    transition: all 0.3s cubic-bezier(0.55, 0.09, 0.68, 0.53);
     display: flex;
     flex-direction: column;
 }
@@ -537,6 +533,12 @@ textarea {
     margin-left: -2px;
     background: var(--color-black);
     transform: rotate(90deg);
+    transition: all 0.3s cubic-bezier(0.55, 0.09, 0.68, 0.53);
+
+    &.active {
+        display: block;
+        margin-left: 175px;
+    }
 }
 
 .arrow-btn__left_sidebar:after,
@@ -2000,11 +2002,6 @@ textarea:-ms-input-placeholder {
 
     .left-sidebar__btn {
         display: block;
-
-        &.active {
-            display: block;
-            margin-left: 174px;
-        }
     }
 
     .container-page {
