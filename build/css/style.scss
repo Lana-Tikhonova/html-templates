@@ -1344,6 +1344,104 @@ h1 {
     }
 }
 
+.mfp-image-holder .mfp-content {
+    max-width: 90%;
+}
+
+.mfp-arrow {
+    width: 50px;
+    height: 50px;
+    margin-top: -25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &:active {
+        margin-top: -25px;
+    }
+
+    &:after,
+    &:before {
+        content: "";
+        background-color: rgba(var(--color-two), 1);
+        width: 25px;
+        height: 4px;
+        opacity: 1;
+        transition: var(--transition);
+        position: relative;
+        display: block;
+        border-radius: 2px;
+        border: none;
+        margin: 0;
+        left: inherit;
+    }
+}
+
+.mfp-arrow-left {
+    &:after {
+        transform: rotate(45deg);
+        top: 26px;
+        left: 0px;
+    }
+
+    &:before {
+        transform: rotate(-45deg);
+        top: 15px;
+        left: 0px;
+    }
+}
+
+.mfp-arrow-right {
+    &:after {
+        transform: rotate(-45deg);
+        top: 26px;
+        right: 0px;
+    }
+
+    &:before {
+        transform: rotate(45deg);
+        top: 15px;
+        right: 0px;
+    }
+}
+
+.mfp-close {
+    top: -4px;
+}
+
+.mfp-image-holder .mfp-close,
+.mfp-iframe-holder .mfp-close {
+    font-size: 0;
+    right: 0;
+    padding: 0;
+
+    &:after,
+    &:before {
+        content: "";
+        background-color: rgba(var(--color-two), 1);
+        width: 30px;
+        height: 4px;
+        opacity: 1;
+        transition: var(--transition);
+        position: absolute;
+        display: block;
+        border-radius: 2px;
+        right: 13px;
+        border: none;
+        margin: 0;
+        top: 20px;
+    }
+
+    &:after {
+        transform: rotate(-45deg);
+    }
+
+    &:before {
+        transform: rotate(45deg);
+    }
+}
+
 /* prices */
 
 .prices {
@@ -2171,6 +2269,10 @@ textarea:-ms-input-placeholder {
 
     .skills-block__item {
         width: 60%;
+    }
+
+    .mfp-arrow {
+        width: 30px;
     }
 
 }

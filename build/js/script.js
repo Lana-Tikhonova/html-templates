@@ -4,21 +4,24 @@ $(document).ready(function () {
     
     navigation on script.js  
 
-    1. preloader
-    2. menu
-    3. smooth scrolling to the section
-    4. scroll up
-    5. the transformation of the text in the section "about"
-    6. slider in the "services" section
-    7. styling the cursor
-    8. opening the left sidebar when clicking on the ".left-sidebar__btn" button
-    9. blocks with prices in the mobile version
+    1. changing the main page colors
+    2. preloader
+    3. menu
+    4. smooth scrolling to the section
+    5. scroll up
+    6. the transformation of the text in the section "about"
+    7. slider in the "services" section
+    8. styling the cursor
+    9. opening the left sidebar when clicking on the ".left-sidebar__btn" button
+    10. blocks with prices in the mobile version
 
     */
 
 
     "use strict";
 
+
+    //changing the main page colors
     const redBtn = document.querySelector('.red');
     const blueBtn = document.querySelector('.blue');
     const turquoiseBtn = document.querySelector('.turquoise');
@@ -409,4 +412,12 @@ $(document).ready(function () {
         $parentProgram.toggleClass('activated');
         e.preventDefault();
     });
+
+    $('.masonry-gallery__item').magnificPopup({
+        type: 'image',
+        gallery: {
+            enabled: true
+        },
+    });
+
 });

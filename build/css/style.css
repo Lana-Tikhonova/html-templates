@@ -1388,6 +1388,119 @@ h1 span:hover:after {
   }
 }
 
+.mfp-image-holder .mfp-content {
+  max-width: 90%;
+}
+
+.mfp-arrow {
+  width: 50px;
+  height: 50px;
+  margin-top: -25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.mfp-arrow:active {
+  margin-top: -25px;
+}
+
+.mfp-arrow:after, .mfp-arrow:before {
+  content: "";
+  background-color: rgba(var(--color-two), 1);
+  width: 25px;
+  height: 4px;
+  opacity: 1;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  position: relative;
+  display: block;
+  border-radius: 2px;
+  border: none;
+  margin: 0;
+  left: inherit;
+}
+
+.mfp-arrow-left:after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 26px;
+  left: 0px;
+}
+
+.mfp-arrow-left:before {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 15px;
+  left: 0px;
+}
+
+.mfp-arrow-right:after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 26px;
+  right: 0px;
+}
+
+.mfp-arrow-right:before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 15px;
+  right: 0px;
+}
+
+.mfp-close {
+  top: -4px;
+}
+
+.mfp-image-holder .mfp-close,
+.mfp-iframe-holder .mfp-close {
+  font-size: 0;
+  right: 0;
+  padding: 0;
+}
+
+.mfp-image-holder .mfp-close:after, .mfp-image-holder .mfp-close:before,
+.mfp-iframe-holder .mfp-close:after,
+.mfp-iframe-holder .mfp-close:before {
+  content: "";
+  background-color: rgba(var(--color-two), 1);
+  width: 30px;
+  height: 4px;
+  opacity: 1;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  position: absolute;
+  display: block;
+  border-radius: 2px;
+  right: 13px;
+  border: none;
+  margin: 0;
+  top: 20px;
+}
+
+.mfp-image-holder .mfp-close:after,
+.mfp-iframe-holder .mfp-close:after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.mfp-image-holder .mfp-close:before,
+.mfp-iframe-holder .mfp-close:before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
 /* prices */
 .prices {
   position: relative;
@@ -2164,6 +2277,9 @@ textarea:-ms-input-placeholder {
   }
   .skills-block__item {
     width: 60%;
+  }
+  .mfp-arrow {
+    width: 30px;
   }
 }
 
