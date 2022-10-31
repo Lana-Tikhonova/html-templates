@@ -103,12 +103,12 @@ body {
 
 .color .color-item.blue:before {
   left: 0;
-  background-color: #07113e;
+  background-color: #9bb8e8;
 }
 
 .color .color-item.blue:after {
   right: 0;
-  background-color: #fff;
+  background-color: #8b9be2;
 }
 
 .color .color-item.turquoise:before {
